@@ -1,7 +1,7 @@
 -
   !python {model: base.language.install}: |
-    # vals = {'lang': 'es_AR'}
-    vals = {'lang': 'es_ES'}
+    lang_code = 'es_ES'
+    vals = {'lang': lang_code}
     wizard_id = self.create(cr, uid, vals)
     self.lang_install(cr, uid, [wizard_id], {'active_ids': [wizard_id]})
     user_ids = self.pool['res.users'].search(cr, uid, [])
@@ -12,5 +12,6 @@
   set language to website
 -
   !python {model: website, id: website.default_website}: |
-    lang_id = self.pool['res.lang'].search(cr, uid, [('code', '=', 'es_AR')])[0]
+    lang_code = 'es_ES'
+    lang_id = self.pool['res.lang'].search(cr, uid, [('code', '=', lang_code)])[0]
     self[0].write({'default_lang_id': lang_id, 'language_ids': [(6, 0, [lang_id])]})
