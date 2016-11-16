@@ -30,6 +30,7 @@
     'images': [
     ],
     'depends': [
+        'account_accountant',
         'l10n_ar_afipws_fe',
         'account_multicompany_usability',
         'account_multic_fix',
@@ -66,10 +67,19 @@
         'sale_exception_partner_state',
         'sale_exception_price_security',
         'sale_quotation_products',
+        'purchase_discount',
+        'stock_inventory_preparation_filter',
+        'base_state_active',
+        'project_description',
+        'project_duplicate_fix',
+        'project_kanban_open_project',
+        # 'sale_order_type_user_default',
+        'sale_procurement_date_confirm',
     ],
     'data': [
     ],
     'demo': [
+        'load_ar_demo.yml',
     ],
     'test': [
     ],
