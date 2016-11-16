@@ -1,8 +1,9 @@
 -
-  !python {model: ir.module.module}: |
-    lang_code = 'es_ES'
-    # lang_code = 'es_AR'
-    module_ids = self.search(cr, uid, [('state', '=', 'installed')])
-    self.update_translations(cr, uid, module_ids, lang_code, {})
+  !python {model: base.language.install}: |
+    vals = {'lang': 'es_AR', 'state': 'init'}
+    wizard_id = self.create(cr, uid, vals)
+    self.lang_install(cr, uid, [wizard_id], {'active_ids': [wizard_id]})
     user_ids = self.pool['res.users'].search(cr, uid, [])
-    self.pool['res.users'].search(cr, uid, user_ids, {'lang': lang_code})
+    self.pool['res.users'].write(cr, uid, user_ids, vals)
+# otra alternativa es usar este gist
+# https://gist.github.com/moylop260/d3bad1e96e46cae0cd99bb6db224ed60
