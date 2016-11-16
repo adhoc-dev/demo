@@ -1,5 +1,5 @@
 language: python
-sudo: false
+sudo: true
 cache:
   apt: true
   directories:
@@ -60,6 +60,7 @@ virtualenv:
   system_site_packages: true
 
 install:
+  - sudo locale-gen --no-archive es_AR.UTF-8
   - git clone --depth=1 https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
   - travis_install_nightly
