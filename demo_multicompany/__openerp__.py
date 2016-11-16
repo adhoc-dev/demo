@@ -77,9 +77,9 @@
         'sale_procurement_date_confirm',
     ],
     'data': [
+        'load_es_lang.yml',
     ],
     'demo': [
-        'load_ar_demo.yml',
     ],
     'test': [
     ],
