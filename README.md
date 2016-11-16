@@ -1,0 +1,2 @@
+# demo
+Odoo demo addons
