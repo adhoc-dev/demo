@@ -25,6 +25,13 @@ addons:
       #for aeroo
       - cups
       - libcups2-dev
+      # FE
+      - python-dev
+      - swig
+      - libffi-dev
+      - libssl-dev
+      - python-m2crypto
+      - python-httplib2
 #     Search your packages here:
 #       https://github.com/travis-ci/apt-package-whitelist/blob/master/ubuntu-precise
 #      - wkhtmltopdf  # only add if needed and check the before_install section below
@@ -60,7 +67,7 @@ virtualenv:
   system_site_packages: true
 
 install:
-  - if [[ "${OCA_RUNBOT}" == "1" ]]; then locale-gen es_AR.UTF-8; fi
+  - if [[ "${OCA_RUNBOT}" == "1" ]]; then locale-gen es_AR.UTF-8 && locale-gen es_ES.UTF-8; fi
   - git clone --depth=1 https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
   - travis_install_nightly
