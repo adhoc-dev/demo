@@ -69,9 +69,9 @@
         # 'sale_quotation_products',
     ],
     'data': [
-        'load_ar_demo.yml',
     ],
     'demo': [
+        'load_ar_demo.yml',
     ],
     'test': [
     ],
