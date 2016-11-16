@@ -1,6 +1,6 @@
 -
   !python {model: base.language.install}: |
-    vals = {'lang': 'es_AR', 'state': 'init'}
+    vals = {'lang': 'es_AR'}
     wizard_id = self.create(cr, uid, vals)
     self.lang_install(cr, uid, [wizard_id], {'active_ids': [wizard_id]})
     user_ids = self.pool['res.users'].search(cr, uid, [])
