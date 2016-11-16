@@ -71,6 +71,7 @@
     'data': [
     ],
     'demo': [
+        'load_ar_demo.yml',
     ],
     'test': [
     ],
