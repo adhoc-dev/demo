@@ -75,6 +75,7 @@
         'project_kanban_open_project',
         # 'sale_order_type_user_default',
         'sale_procurement_date_confirm',
+        'base_technical_features',
     ],
     'data': [
         'load_es_lang.yml',
