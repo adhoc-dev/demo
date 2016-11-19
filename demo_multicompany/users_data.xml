@@ -4,13 +4,13 @@
 
         <record id="partner_demo_admin" model="res.partner">
             <field name="name">Demo Admin User</field>
-            <field name="company_id" ref="main_company"/>
+            <field name="company_id" ref="base.main_company"/>
             <field name="customer" eval="False"/>
             <field name="email">demo@yourcompany.example.com</field>
             <field name="street">Avenue des Dessus-de-Lives, 2</field>
             <field name="city">Namur (Loyers)</field>
             <field name="zip">5101</field>
-            <field name="country_id" ref="be"/>
+            <field name="country_id" ref="base.be"/>
         </record>
 
         <record model="res.partner.bank" id="bank_partner_demo">
@@ -20,13 +20,28 @@
         </record>
 
         <record id="user_demo_admin" model="res.users">
-            <field name="partner_id" ref="base.partner_demo_admin"/>
+            <field name="partner_id" ref="partner_demo_admin"/>
             <field name="login">demo_admin</field>
             <field name="password">demo_admin</field>
             <field name="signature">--
 Mr Demo Admin</field>
-            <field name="company_id" ref="main_company"/>
-            <field name="groups_id" eval="[(6,0,[ref('base.group_user'), ref('base.group_partner_manager')])]"/>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="groups_id" eval="[(6,0,[
+                ref('base.group_user'),
+                ref('base.group_partner_manager'),
+                ref('base.group_multi_company'),
+                ref('base.group_sale_manager'),
+                ref('base.group_hr_manager'),
+                ref('project.group_project_manager'),
+                ref('stock.group_stock_manager'),
+                ref('purchase.group_purchase_manager'),
+                ref('account.group_account_manager'),
+                ref('base.group_website_designer'),
+                ref('account_invoice_operation.invoice_plan_edit'),
+                ref('base.group_system'),
+                ref('partner_state.approve_partners'),
+                ref('sale_exception_credit_limit.credit_config'),
+            ])]"/>
             <field name="image" type="base64" file="base/static/img/user_demo-image.jpg"/>
         </record>
 
