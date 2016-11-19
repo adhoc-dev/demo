@@ -19,7 +19,7 @@
             <field name="partner_id" ref="partner_demo_admin" />
         </record>
 
-        <record id="user_demo_admin" model="res.users">
+        <record id="user_demo_admin" model="res.users" context="{'no_reset_password': True}">
             <field name="partner_id" ref="partner_demo_admin"/>
             <field name="login">demo_admin</field>
             <field name="password">demo_admin</field>
