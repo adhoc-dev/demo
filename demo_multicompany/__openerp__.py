@@ -50,6 +50,7 @@
         'l10n_ar_aeroo_purchase',
         'l10n_ar_aeroo_sale',
         'l10n_ar_aeroo_stock',
+        'l10n_ar_aeroo_payment_group',
         'l10n_ar_currency_update',
         'l10n_ar_padron_afip',
         'l10n_ar_bank',
@@ -79,6 +80,8 @@
     ],
     'data': [
         'load_es_lang.yml',
+        'config_data.xml',
+        'users_data.xml',
     ],
     'demo': [
     ],
