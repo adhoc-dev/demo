@@ -50,6 +50,7 @@
         'l10n_ar_aeroo_purchase',
         'l10n_ar_aeroo_sale',
         'l10n_ar_aeroo_stock',
+        'l10n_ar_aeroo_payment_group',
         'l10n_ar_currency_update',
         'l10n_ar_padron_afip',
         'l10n_ar_bank',
@@ -75,10 +76,13 @@
         'project_kanban_open_project',
         # 'sale_order_type_user_default',
         'sale_procurement_date_confirm',
+        'hr_attendance',
         'base_technical_features',
     ],
     'data': [
         'load_es_lang.yml',
+        'config_data.xml',
+        'users_data.xml',
     ],
     'demo': [
     ],
