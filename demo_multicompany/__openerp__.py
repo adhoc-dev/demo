@@ -92,7 +92,7 @@
 
         # MODULOS INSTALADOS EN ADHOC
         'account_accountant',
-        'support_branding_adhoc',
+        # 'support_branding_adhoc', DEPRECIADO PARA ENTEPRISE
         'web_support_client',
         # 'web_support_client_issue', NO MIGRADO
         'stock',
@@ -207,7 +207,7 @@
         # 'sale_usability_extension', DEPRECIADO
         'stock_inventory_preparation_filter',
         'stock_usability',
-        'support_branding',
+        # 'support_branding', DEPRECIADO PARA ENTEPRISE
         # 'warning_box', DEPRECIADO
         # 'web_advanced_search_wildcard', NO MIGRADO
         # 'web_advanced_search_x2x', NO MIGRADO
