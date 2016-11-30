@@ -78,6 +78,7 @@
         'sale_procurement_date_confirm',
         'hr_attendance',
         'base_technical_features',
+        'account_transfer_unreconcile',
     ],
     'data': [
         'load_es_lang.yml',
