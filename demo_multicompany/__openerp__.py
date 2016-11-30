@@ -224,7 +224,7 @@
         'website_partner',
         'web_widget_color',
         'web_widget_many2many_tags_multi_selection',
-        'web_widget_one2many_tags',
+        # 'web_widget_one2many_tags', NO MIGRADO
         'web_widget_x2many_2d_matrix',
         # 'infrastructure_contract', NO MIGRADO
         # 'infrastructure_issue', NO MIGRADO
