@@ -322,7 +322,7 @@
         'website_blog',
         'website_crm',
         'website_twitter',
-        # 'web_switch_company_warning', NO MIGRADO
+        # 'web_switch_company_warning', DEPRECIADO
         'account_invoice_operation',
         'product_computed_list_price',
         'product_pack',
