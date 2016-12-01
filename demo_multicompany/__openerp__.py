@@ -156,7 +156,7 @@
         # 'account_voucher_fix', DEPRECIADO
         # 'account_voucher_payline', DEPRECIADO
         # 'account_voucher_withholding', DEPRECIADO
-        # 'adhoc_modules_server', NO MIGRADO
+        'adhoc_modules_server',
         'analytic',
         # 'attachment_edit', NO MIGRADO
         'base_action_rule',
@@ -262,7 +262,7 @@
         'account_move_helper',
         'account_multicompany_usability',
         'account_no_translation',
-        # 'adhoc_modules', NO MIGRADO
+        'adhoc_modules',
         'product_no_translation',
         # 'account_analytic_purchase_contract', NO MIGRADO
         'account_check',

@@ -18,3 +18,4 @@ purchase-workflow
 management-system
 knowledge
 social
+account-financial-reporting
