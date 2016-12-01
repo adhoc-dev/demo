@@ -89,6 +89,8 @@
         'sale_exception',
         'disable_odoo_online',
         'hr_appraisal',
+        'account_financial_report_qweb',
+        'account_tax_balance',
 
         # MODULOS INSTALADOS EN ADHOC
         'account_accountant',
@@ -135,7 +137,7 @@
         'stock_picking_labels',
         # 'stock_picking_list', NO MIGRADO
         'website_talkus',
-        # 'web_support_server', NO MIGRADO
+        'web_support_server',
         'purchase',
         'hr',
         'hr_timesheet',
@@ -145,8 +147,8 @@
         # 'hr_evaluation', RENOMBRADO a hr_appraisal
         'account',
         # 'account_chart', DEPRECIADo
-        # 'account_financial_report_webkit', NO MIGRADO
-        # 'account_financial_report_webkit_xls', NO MIGRADO
+        # 'account_financial_report_webkit', RENOMBRADO a _qweb
+        # 'account_financial_report_webkit_xls', DEPRECIADO
         # 'account_general_ledger_fix', DEPRECIADO
         # 'account_journal_book', NO MIGRADo
         # 'account_journal_payment_subtype', DEPRECIADO
@@ -199,7 +201,7 @@
         # 'purchase_line_defaults', DEPRECIADO
         'report_aeroo',
         'report_webkit',
-        # 'report_xls', NO MIGRADO
+        # 'report_xls', DEPRECIADO por report_xlsx
         'resource',
         # 'sale_exceptions', RENOMBRADo
         # 'sale_pricelist_discount', DEPRECIADO
