@@ -51,5 +51,19 @@ Mr Demo Admin</field>
             <field name="image" type="base64" file="base/static/img/user_demo-image.jpg"/>
         </record>
 
+
+      <record id="employee_demo_admin" model="hr.employee">
+          <field name="name">Demo Admin User</field>
+          <field name="user_id" ref="user_demo_admin"/>
+          <field name="department_id" ref="hr.dep_rd"/>
+          <field name="parent_id" ref="hr.employee_al"/>
+          <field name="job_id" ref="hr.job_developer"/>
+          <field name="category_ids" eval="[(6, 0, [ref('hr.employee_category_4')])]"/>
+          <field name="work_location">Building 1, Second Floor</field>
+          <field name="work_phone">+3281813700</field>
+          <field name="work_email">gilles@openerp.com</field>
+          <field name="image" type="base64" file="hr/static/img/employee_qdp-image.png"/>
+      </record>
+
     </data>
 </openerp>
