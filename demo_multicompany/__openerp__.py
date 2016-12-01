@@ -91,6 +91,11 @@
         'hr_appraisal',
         'account_financial_report_qweb',
         'account_tax_balance',
+        # odoo enterprise modules
+        'account_contract_dashboard',
+        'hr_holidays_gantt',
+        'mass_mailing_themes',
+        'website_contract',
 
         # MODULOS INSTALADOS EN ADHOC
         'account_accountant',
@@ -216,7 +221,7 @@
         # 'web_advanced_search_x2x', NO MIGRADO
         # 'web_clean_navbar', DEPRECIADO
         'web_export_view',
-        # 'web_ir_actions_act_window_message', NO MIGRADO
+        # 'web_ir_actions_act_window_message', DEPRECIADO
         # 'web_kanban_sparkline', DEPRECIADO
         # 'web_recipients_uncheck', NO MIGRADO
         # 'web_search_with_and', NO MIGRADO
@@ -304,7 +309,7 @@
         'product_supplier_search',
         # 'product_template_search_by_ean13', RENOMBRADO
         # 'web_favicon', NO MIGRADO
-        'web_widget_float_formula',
+        # 'web_widget_float_formula', DEPRECIADO PARA ENTERPRISE
         # 'account_contract_lines_sequence', RENOMBRADO
         # 'account_contract_prices_update', RENOMBRADO
         'partner_social_fields',
@@ -328,7 +333,7 @@
         # 'web_switch_company_warning', DEPRECIADO
         'account_invoice_operation',
         'product_computed_list_price',
-        'product_pack',
+        # 'product_pack', NO LO DEBERIAMOS USAR MAS
         'product_price_currency',
         'project_stage',
         'project_task_activity',

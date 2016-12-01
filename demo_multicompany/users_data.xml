@@ -41,6 +41,12 @@ Mr Demo Admin</field>
                 ref('account.group_account_manager'),
                 ref('base.group_website_designer'),
                 ref('base.group_system'),
+                ref('infrastructure.group_manager'),
+                ref('marketing.group_lead_automation_manager'),
+                ref('sale_contract.group_sale_contract_manager'),
+                ref('base.group_survey_manager'),
+                ref('base.group_survey_user'),
+                ref('account_invoice_operation.invoice_plan_edit'),
             ])]"/>
             <field name="image" type="base64" file="base/static/img/user_demo-image.jpg"/>
         </record>
