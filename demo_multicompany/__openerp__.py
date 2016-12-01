@@ -81,9 +81,10 @@
         'account_transfer_unreconcile',
     ],
     'data': [
-        'load_es_lang.yml',
         'config_data.xml',
         'users_data.xml',
+        # last load lang (so user is already created)
+        'load_es_lang.yml',
     ],
     'demo': [
     ],
