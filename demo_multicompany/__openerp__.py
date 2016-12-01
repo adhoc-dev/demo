@@ -96,6 +96,8 @@
         'hr_holidays_gantt',
         'mass_mailing_themes',
         'website_contract',
+        'website_form_editor',
+        'account_payment_fix',
 
         # MODULOS INSTALADOS EN ADHOC
         'account_accountant',
