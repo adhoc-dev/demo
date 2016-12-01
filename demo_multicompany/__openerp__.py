@@ -96,7 +96,8 @@
         'account_accountant',
         # 'support_branding_adhoc', DEPRECIADO PARA ENTEPRISE
         'web_support_client',
-        # 'web_support_client_issue', NO MIGRADO
+        'web_support_client_issue',
+        'web_support_server_issue',
         'stock',
         # 'admin_useful_groups', DEPRECIADO
         # 'auth_admin_passkey', NO MIGRADO
@@ -228,10 +229,10 @@
         'web_widget_many2many_tags_multi_selection',
         # 'web_widget_one2many_tags', NO MIGRADO
         'web_widget_x2many_2d_matrix',
-        # 'infrastructure_contract', NO MIGRADO
-        # 'infrastructure_issue', NO MIGRADO
-        # 'infrastructure_mass_mailing', NO MIGRADO
-        # 'infrastructure_product', NO MIGRADO
+        'infrastructure_contract',
+        'infrastructure_issue',
+        'infrastructure_mass_mailing',
+        # 'infrastructure_product', DEPRECIADO
         # 'ir_export_extended_ept', DEPRECIADO
         # 'adhoc_base_account', DEPRECIADO
         # 'adhoc_base_product', DEPRECIADO
