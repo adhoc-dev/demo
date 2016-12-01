@@ -47,6 +47,7 @@ Mr Demo Admin</field>
                 ref('base.group_survey_manager'),
                 ref('base.group_survey_user'),
                 ref('account_invoice_operation.invoice_plan_edit'),
+                ref('mass_mailing.group_mass_mailing_user'),
             ])]"/>
             <field name="image" type="base64" file="base/static/img/user_demo-image.jpg"/>
         </record>
