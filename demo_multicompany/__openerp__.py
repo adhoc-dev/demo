@@ -101,7 +101,7 @@
 
         # MODULOS INSTALADOS EN ADHOC
         'account_accountant',
-        'support_branding_adhoc',
+        # 'support_branding_adhoc', DEPRECIADO PARA ENTEPRISE
         'web_support_client',
         'web_support_client_issue',
         'web_support_server_issue',
