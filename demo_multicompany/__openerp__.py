@@ -98,6 +98,7 @@
         'website_contract',
         'website_form_editor',
         'account_payment_fix',
+        'purchase_contract',
 
         # MODULOS INSTALADOS EN ADHOC
         'account_accountant',
@@ -143,7 +144,7 @@
         'report_extended',
         'sale',
         'stock_picking_labels',
-        # 'stock_picking_list', NO MIGRADO
+        'stock_picking_list',
         'website_talkus',
         'web_support_server',
         'purchase',
@@ -274,7 +275,7 @@
         'account_no_translation',
         'adhoc_modules',
         'product_no_translation',
-        # 'account_analytic_purchase_contract', NO MIGRADO
+        # 'account_analytic_purchase_contract', RENOMBRADO
         'account_check',
         'product_catalog_aeroo_report',
         'project_category',
