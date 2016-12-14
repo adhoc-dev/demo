@@ -77,8 +77,8 @@
         # # 'sale_order_type_user_default',
         # 'sale_procurement_date_confirm',
         # 'hr_attendance',
-        # 'base_technical_features',
-        # 'account_transfer_unreconcile',
+        'base_technical_features',
+        'account_transfer_unreconcile',
 
         # MODULOS NUEVOS QUE REEMPLAZAN A VIEJOS
         'l10n_ar_bank',

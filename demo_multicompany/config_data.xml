@@ -14,6 +14,7 @@
              -->
             <field eval="[
                 (4, ref('base.group_light_multi_company')),
+                (4, ref('base.group_multi_company')),
                 (4, ref('analytic.group_analytic_accounting')),
                 (4, ref('stock.group_locations')),
                 (4, ref('stock_account.group_inventory_valuation')),
