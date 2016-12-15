@@ -79,6 +79,7 @@
         # 'hr_attendance',
         'base_technical_features',
         'account_transfer_unreconcile',
+        'l10n_ar_account_vat_ledger',
 
         # MODULOS NUEVOS QUE REEMPLAZAN A VIEJOS
         'l10n_ar_bank',

@@ -38,6 +38,7 @@ Mr Demo Admin</field>
                 ref('project.group_project_manager'),
                 ref('stock.group_stock_manager'),
                 ref('purchase.group_purchase_manager'),
+                ref('purchase_contract.group_purchase_contract_manager'),
                 ref('account.group_account_manager'),
                 ref('base.group_website_designer'),
                 ref('base.group_system'),
