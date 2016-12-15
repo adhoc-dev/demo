@@ -329,7 +329,7 @@
         # 'contract_multic_fix', DEPRECIADO
         'purchase_multic_fix',
         # 'sale_multic_fix', DEPRECIADO
-        'web_dashboard_tile',
+        # 'web_dashboard_tile', NO MIGRADO
         'web_easy_switch_company',
         'website_blog',
         'website_crm',
