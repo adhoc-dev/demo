@@ -10,7 +10,7 @@ ingadhoc-project https://github.com/ingadhoc/project.git
 ingadhoc-purchase https://github.com/ingadhoc/purchase.git
 ingadhoc-sale https://github.com/ingadhoc/sale.git
 ingadhoc-website https://github.com/ingadhoc/website.git
-ingadhoc-web https://github.com/ingadhoc/web.git
+ingadhoc-odoo-web https://github.com/ingadhoc/odoo-web.git
 ingadhoc-hr https://github.com/ingadhoc/hr.git
 server-tools
 manufacture
