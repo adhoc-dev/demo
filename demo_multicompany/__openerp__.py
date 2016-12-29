@@ -43,7 +43,7 @@
         'account_invoice_commercial',
         'account_invoice_company_search',
         'account_invoice_journal_group',
-        # 'account_invoice_operation',
+        'account_invoice_operation',
         'account_invoice_prices_update',
         'account_invoice_tax_wizard',
         'l10n_ar_aeroo_einvoice',
