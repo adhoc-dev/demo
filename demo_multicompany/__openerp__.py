@@ -30,6 +30,7 @@
     'images': [
     ],
     'depends': [
+        'board',
         'account_accountant',
         'l10n_ar_afipws_fe',
         'account_multicompany_usability',
