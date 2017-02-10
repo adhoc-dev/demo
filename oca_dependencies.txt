@@ -1,4 +1,4 @@
-odoo-enterprise git@github.com:odoo/enterprise.git
+fodoo-enterprise git@github.com:odoo/enterprise.git
 ingadhoc-enterprise-extensions https://github.com/ingadhoc/enterprise-extensions.git
 ingadhoc-argentina-reporting https://github.com/ingadhoc/argentina-reporting.git
 ingadhoc-account-financial-tools https://github.com/ingadhoc/account-financial-tools.git
@@ -12,7 +12,7 @@ ingadhoc-sale https://github.com/ingadhoc/sale.git
 ingadhoc-website https://github.com/ingadhoc/website.git
 ingadhoc-hr https://github.com/ingadhoc/hr.git
 ingadhoc-patches https://github.com/ingadhoc/patches.git
-ingadhoc-adhoc-saas git@bitbucket.org:ingadhoc/adhoc-saas.git
+#ingadhoc-adhoc-saas git@bitbucket.org:ingadhoc/adhoc-saas.git
 server-tools
 manufacture
 stock-logistics-warehouse
