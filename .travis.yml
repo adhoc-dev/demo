@@ -69,6 +69,7 @@ virtualenv:
 install:
   - if [[ "${OCA_RUNBOT}" == "1" ]]; then locale-gen es_AR.UTF-8 && locale-gen es_ES.UTF-8; fi
   - git clone --depth=1 https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
+  - git clone git@bitbucket.org:ingadhoc/adhoc-saas.git -b 9.0 ~/dependencies/
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
   - travis_install_nightly
 
