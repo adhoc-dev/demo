@@ -45,6 +45,10 @@
         'account_invoice_company_search',
         'account_invoice_journal_group',
         # 'account_invoice_operation',
+        # este se auto instala solo si estaba account usability, lo forzamos
+        # por las dudas
+        'adhoc_account_planner',
+        'account_usability',
         'account_statement_move_import',
         'account_invoice_prices_update',
         'account_invoice_tax_wizard',
