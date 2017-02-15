@@ -69,9 +69,6 @@ virtualenv:
 install:
   - if [[ "${OCA_RUNBOT}" == "1" ]]; then locale-gen es_AR.UTF-8 && locale-gen es_ES.UTF-8; fi
   - git clone --depth=1 https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
-  # financial-reporting agrega a repo financial tools que agrega connector y aparentemente
-  # connector nos mata performance de runbot y en realidad tampoco lo queremos
-  - mv ~/dependencies/connector /
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
   - travis_install_nightly
 
