@@ -31,6 +31,7 @@
     ],
     'depends': [
         'board',
+        'l10n_ar_account_reports',
         'account_accountant',
         'l10n_ar_afipws_fe',
         'account_multicompany_usability',
