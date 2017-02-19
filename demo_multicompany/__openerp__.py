@@ -32,6 +32,8 @@
     'depends': [
         'board',
         'l10n_ar_account_reports',
+        'website_portal_followup',
+        'account_reports_followup',
         'account_accountant',
         'l10n_ar_afipws_fe',
         'account_multicompany_usability',
@@ -163,6 +165,7 @@
         'users_data.xml',
         # last load lang (so user is already created)
         'load_es_lang.yml',
+        'account_data.yml',
     ],
     'demo': [
     ],
