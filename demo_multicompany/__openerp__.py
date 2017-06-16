@@ -61,7 +61,6 @@
         'l10n_ar_aeroo_stock',
         'l10n_ar_aeroo_payment_group',
         'l10n_ar_currency_update',
-        'l10n_ar_padron_afip',
         'l10n_ar_bank',
         'product_catalog_aeroo_report_public_categ',
         'product_no_translation',
