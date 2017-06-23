@@ -120,7 +120,7 @@
         # 'hr_timesheet_invoice', DEPRECIADO
         # 'knowledge', DEPRECIADO
         # 'l10n_ar_base_vat', DEPRECIADO
-        'l10n_ar_padron_afip',
+        # 'l10n_ar_padron_afip',
         'mail_tracking',
         'mass_editing',
         'payment_todopago',
