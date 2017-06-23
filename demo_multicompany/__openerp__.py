@@ -126,6 +126,8 @@
         'payment_todopago',
         'project_issue_sheet',
         'stock_usability',
+        'purchase_usability',
+        'sale_usability',
         # 'support_branding', DEPRECIADO PARA ENTEPRISE
         # 'warning_box', DEPRECIADO
         # 'web_advanced_search_wildcard', NO MIGRADO
