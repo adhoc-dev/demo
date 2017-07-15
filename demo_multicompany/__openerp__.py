@@ -87,8 +87,9 @@
         'l10n_ar_account_vat_ledger',
 
         'hr_appraisal',
-        'account_financial_report_qweb',
-        'account_tax_balance',
+        # estos no lo usamos ni recomendamos mas
+        # 'account_financial_report_qweb',
+        # 'account_tax_balance',
         # odoo enterprise modules
         'account_contract_dashboard',
         'hr_holidays_gantt',
@@ -98,7 +99,7 @@
         'account_payment_fix',
         'purchase_contract',
 
-        'web_support_client_issue',
+        # 'web_support_client_issue',
 
         'l10n_ar_aeroo_base',
         'l10n_ar_aeroo_einvoice',
@@ -111,11 +112,13 @@
         'stock_picking_list',
         'hr_recruitment',
         'hr_expense',
-        'database_cleanup',
-        'google_account',
-        'google_calendar',
-        'google_drive',
-        'google_spreadsheet',
+        # este no hace falta para demo
+        # 'database_cleanup',
+        # estos en realidad no los focmentamos
+        # 'google_account',
+        # 'google_calendar',
+        # 'google_drive',
+        # 'google_spreadsheet',
         'hr_contract',
         # 'hr_timesheet_invoice', DEPRECIADO
         # 'knowledge', DEPRECIADO
@@ -146,7 +149,8 @@
         'adhoc_modules',
         'project_category',
         'sale_prices_update',
-        'mis_builder',
+        # no hace falta
+        # 'mis_builder',
         'product_search_supplier_code',
         'project_closure_restrictions',
         'sale_contract_restrict_domain',
@@ -164,8 +168,9 @@
     'data': [
         'config_data.xml',
         'users_data.xml',
-        # last load lang (so user is already created)
-        'load_es_lang.yml',
+        # last load lang (so user is already created) (we disable it to make it
+        # faster and also because on rancher, already on es ar)
+        # 'load_es_lang.yml',
         'account_data.yml',
     ],
     'demo': [
