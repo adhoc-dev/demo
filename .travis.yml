@@ -38,12 +38,12 @@ addons:
 
 # set up an X server to run wkhtmltopdf.
 #before_install:
-#  - "export DISPLAY=:99.0"
+#  - "export DISPLAY=:910.0"
 #  - "sh -e /etc/init.d/xvfb start"
 
 env:
   global:
-  - VERSION="9.0" TESTS="0" LINT_CHECK="0" TRANSIFEX="0"
+  - VERSION="10.0" TESTS="0" LINT_CHECK="0" TRANSIFEX="0"
   - TRANSIFEX_USER='jjscarafia'
   # to get secure, run 'travis encrypt TRANSIFEX_PASSWORD=[transifex_password] -r [github_repo]'
   # example of github repo 'ingadhoc/odoo-infrastructure'
@@ -68,7 +68,7 @@ virtualenv:
 
 install:
   - if [[ "${OCA_RUNBOT}" == "1" ]]; then locale-gen es_AR.UTF-8 && locale-gen es_ES.UTF-8; fi
-  - if [[ "${OCA_RUNBOT}" == "1" ]]; then git clone -b 9.0 git@github.com:odoo/enterprise.git ${HOME}/dependencies/odoo-enterprise && cd ${HOME}/dependencies/odoo-enterprise && git checkout e0157b6 && cd /; fi
+  - if [[ "${OCA_RUNBOT}" == "1" ]]; then git clone -b 10.0 git@github.com:odoo/enterprise.git ${HOME}/dependencies/odoo-enterprise && cd ${HOME}/dependencies/odoo-enterprise && git checkout e0157b6 && cd /; fi
   - git clone --depth=1 https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
   - travis_install_nightly
