@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Demo of Multicompany Environment',
-    'version': '9.0.1.0.0',
+    'version': '10.0.1.0.0',
     'category': 'Tools',
     'sequence': 14,
     'summary': '',
@@ -31,7 +31,6 @@
     ],
     'depends': [
         'board',
-        'l10n_ar_account',
         # 'l10n_ar_account_reports',
         # 'l10n_ar_afipws_fe',
         # 'account_multic_fix',
