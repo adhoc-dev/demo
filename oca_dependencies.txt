@@ -1,5 +1,6 @@
 # ingadhoc-enterprise-extensions https://github.com/ingadhoc/enterprise-extensions.git
 # ingadhoc-argentina-reporting https://github.com/ingadhoc/argentina-reporting.git
+ingadhoc-odoo-argentina https://github.com/ingadhoc/odoo-argentina.git
 ingadhoc-account-financial-tools https://github.com/ingadhoc/account-financial-tools.git
 # ingadhoc-account-invoicing https://github.com/ingadhoc/account-invoicing.git
 # ingadhoc-account-analytic https://github.com/ingadhoc/account-analytic.git
