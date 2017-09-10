@@ -32,6 +32,8 @@
     'depends': [
         'board',
         'purchase',
+        'account_check',
+        'account_payment_group',
         'marketing_campaign',
         # 'l10n_ar_account_reports',
         # 'l10n_ar_afipws_fe',
