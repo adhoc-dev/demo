@@ -68,6 +68,7 @@ install:
   - if [[ "${OCA_RUNBOT}" == "1" ]]; then locale-gen es_AR.UTF-8 && locale-gen es_ES.UTF-8; fi
   - if [[ "${OCA_RUNBOT}" == "1" ]]; then git clone -b 11.0 git@github.com:odoo/enterprise.git ${HOME}/dependencies/odoo-enterprise && cd ${HOME}/dependencies/odoo-enterprise && git checkout e0157b6 && cd /; fi
   - git clone --depth=1 https://github.com/OCA/maintainer-quality-tools.git ${HOME}/maintainer-quality-tools
+  - sed -i 's/manifest_required_author\=.*/manifest_required_author="ADHOC SA"/g' ${HOME}/maintainer-quality-tools/travis/cfg/travis_run_pylint_pr.cfg
   - export PATH=${HOME}/maintainer-quality-tools/travis:${PATH}
   - travis_install_nightly
 
