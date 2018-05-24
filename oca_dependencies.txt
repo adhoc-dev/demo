@@ -13,13 +13,15 @@ ingadhoc-website https://github.com/ingadhoc/website.git
 ingadhoc-hr https://github.com/ingadhoc/hr.git
 ingadhoc-patches https://github.com/ingadhoc/patches.git
 ingadhoc-adhoc-saas git@bitbucket.org:ingadhoc/adhoc-saas.git
-# server-tools
+server-tools
+server-ux
 # manufacture
 # stock-logistics-warehouse
-# purchase-workflow
+purchase-workflow
 # management-system
 # knowledge
-# social
+social
+currency
 # account-financial-reporting
-# rma
+web
 # crm
