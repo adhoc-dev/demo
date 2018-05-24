@@ -18,6 +18,7 @@
                 (4, ref('base.group_multi_company')),
                 (4, ref('analytic.group_analytic_accounting')),
                 (4, ref('purchase.group_analytic_accounting')),
+                (4, ref('purchase.group_manage_vendor_price')),
                 (4, ref('sale.group_discount_per_so_line')),
                 (3, ref('product.group_product_pricelist')),
             ]" name="implied_ids"/>

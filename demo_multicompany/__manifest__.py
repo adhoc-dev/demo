@@ -122,7 +122,6 @@
         # last load lang (so user is already created) (we disable it to make it
         # faster and also because on rancher, already on es ar)
         # 'load_es_lang.yml',
-        'account_data.yml',
     ],
     'test': [
     ],
