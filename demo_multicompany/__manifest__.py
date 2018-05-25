@@ -97,6 +97,7 @@
         # odoo modules
         'hr_attendance',
         'purchase',
+        'survey',
 
         # odoo enterprise modules
         'website_quote_subscription',
