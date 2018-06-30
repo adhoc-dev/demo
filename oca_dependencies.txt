@@ -17,6 +17,7 @@ ingadhoc-partner https://github.com/ingadhoc/partner.git
 ingadhoc-adhoc-saas git@bitbucket.org:ingadhoc/adhoc-saas.git
 server-tools
 server-ux
+server-auth
 # manufacture
 # stock-logistics-warehouse
 purchase-workflow
