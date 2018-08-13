@@ -40,7 +40,8 @@
         # 'account_multic_fix',
         'account_debt_management',
         'account_move_helper',
-        'currency_rate_inverted',
+        # todavía no definimos usarlo y de hecho no está disponible
+        # 'currency_rate_inverted',
         'account_clean_cancelled_invoice_number',
         'account_ux',
         'portal_ux',
