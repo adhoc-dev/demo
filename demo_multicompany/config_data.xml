@@ -11,8 +11,6 @@
             Analytic Accounting for Sales
             Analytic Accounting for Purchases
             Discount on lines
-            (4, ref('stock_account.group_inventory_valuation')),
-            (4, ref('sale.group_analytic_accounting')),
              -->
             <field eval="[
                 (4, ref('base.group_multi_company')),

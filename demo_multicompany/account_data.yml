@@ -1,8 +1,7 @@
 -
   !python {model: account.journal} : |
       journal = self.new({'name': 'Banco', 'bank_id': ref('l10n_ar_bank.00072'), 'bank_acc_number': '12312312', 'type': 'bank', 'payment_subtype': 'bank'})
-      # TODO enable change subtype
-      # journal.change_payment_subtype()
+      journal.change_payment_subtype()
       journal.name = 'Banco Santander Rio: 12312312'
       vals = journal._convert_to_write(journal._cache)
       journal.create(vals)
