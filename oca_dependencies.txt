@@ -18,6 +18,7 @@ ingadhoc-adhoc-saas git@bitbucket.org:ingadhoc/adhoc-saas.git
 server-tools
 server-ux
 server-auth
+stock-logistics-workflow
 # manufacture
 # stock-logistics-warehouse
 purchase-workflow
