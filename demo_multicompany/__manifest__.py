@@ -61,9 +61,11 @@
         'helpdesk_solutions',
         'stock_picking_labels',
         'l10n_ar_account_vat_ledger',
+        'l10n_ar_website_sale',
         'account_transfer_unreconcile',
         'purchase_subscription',
         'payment_todopago',
+        'account_accountant_ux',
         'account_ux',
         'base_ux',
         'account_reports_ux',
@@ -87,13 +89,21 @@
         'website_sale_ux',
         'website_quote_ux',
         'purchase_multic_fix',
+        'sale_stock_multic_fix',
+        'web_decimal_numpad_dot',
+        'account_fix',
+        'mail_internal',
 
         # oca
+        'stock_picking_invoice_link',
         'mail_tracking',
         'auth_signup_verify_email',
         'mass_editing',
         'web_export_view',
         'web_widget_many2many_tags_multi_selection',
+        'web_advanced_search',
+        'web_search_with_and',
+        'stock_no_negative',
 
         # odoo modules
         'hr_attendance',
