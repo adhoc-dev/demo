@@ -4,6 +4,8 @@
 
         <record id="base.group_user" model="res.groups">
             <!--
+            Financial amounts
+            Multi Currency
             Enable Light Multi Company
             Contabilidad analítica
             Manage Multiple Locations and Warehouses
@@ -13,6 +15,8 @@
             Discount on lines
              -->
             <field eval="[
+                (4, ref('account_debt_management.account_use_financial_amounts')),
+                (4, ref('base.group_multi_currency')),
                 (4, ref('base.group_multi_company')),
                 (4, ref('analytic.group_analytic_accounting')),
                 (4, ref('purchase.group_analytic_accounting')),
