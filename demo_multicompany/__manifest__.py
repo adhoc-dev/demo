@@ -31,6 +31,7 @@
     'depends': [
         'board',
         'l10n_ar_demo',
+        'l10n_ar_stock',
         'l10n_ar_account_tax_settlement',
         'l10n_ar_account_reports',
         'account_reports_followup',
