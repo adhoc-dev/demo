@@ -1,6 +1,6 @@
-[![Runbot Status](http://runbot.adhoc.com.ar/runbot/badge/flat/1/11.0.svg)](http://runbot.adhoc.com.ar/runbot/repo/github-com-ingadhoc-demo-1)
-[![Build Status](https://travis-ci.org/ingadhoc/demo.svg?branch=11.0)](https://travis-ci.org/ingadhoc/demo)
-[![Coverage Status](https://coveralls.io/repos/ingadhoc/demo/badge.png?branch=11.0)](https://coveralls.io/r/ingadhoc/demo?branch=11.0)
+[![Runbot Status](http://runbot.adhoc.com.ar/runbot/badge/flat/1/12.0.svg)](http://runbot.adhoc.com.ar/runbot/repo/github-com-ingadhoc-demo-1)
+[![Build Status](https://travis-ci.org/ingadhoc/demo.svg?branch=12.0)](https://travis-ci.org/ingadhoc/demo)
+[![Coverage Status](https://coveralls.io/repos/ingadhoc/demo/badge.png?branch=12.0)](https://coveralls.io/r/ingadhoc/demo?branch=12.0)
 [![Code Climate](https://codeclimate.com/github/ingadhoc/demo/badges/gpa.svg)](https://codeclimate.com/github/ingadhoc/demo)
 
 # ADHOC Demo
@@ -12,7 +12,7 @@ ADHOC Odoo Demo related Addons
 
 Translation Status
 ------------------
-[![Transifex Status](https://www.transifex.com/projects/p/ingadhoc-demo-11-0/chart/image_png)](https://www.transifex.com/projects/p/ingadhoc-demo-11-0)
+[![Transifex Status](https://www.transifex.com/projects/p/ingadhoc-demo-12-0/chart/image_png)](https://www.transifex.com/projects/p/ingadhoc-demo-12-0)
 
 ----
 
