@@ -92,7 +92,6 @@
         # 'purchase_multic_fix',
         # 'sale_stock_multic_fix',
         'web_decimal_numpad_dot',
-        'account_fix',
         # 'mail_internal',
 
         # oca
