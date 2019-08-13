@@ -14,7 +14,7 @@ ingadhoc-website https://github.com/ingadhoc/website.git
 ingadhoc-hr https://github.com/ingadhoc/hr.git
 ingadhoc-patches https://github.com/ingadhoc/patches.git
 ingadhoc-partner https://github.com/ingadhoc/partner.git
-ingadhoc-adhoc-saas git@bitbucket.org:ingadhoc/adhoc-saas.git
+ingadhoc-adhoc-saas git@gitlab.com:ingadhoc/adhoc-saas.git
 server-tools
 server-ux
 server-auth
