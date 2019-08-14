@@ -15,7 +15,7 @@
             Discount on lines
              -->
             <field eval="[
-                (4, ref('account_debt_management.account_use_financial_amounts')),
+                (4, ref('account_financial_amount.account_use_financial_amounts')),
                 (4, ref('base.group_multi_currency')),
                 (4, ref('base.group_multi_company')),
                 (4, ref('analytic.group_analytic_accounting')),
