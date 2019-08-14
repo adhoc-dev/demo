@@ -109,6 +109,7 @@
         'hr_attendance',
         'purchase',
         'survey',
+        'project',
 
         # odoo enterprise modules
         'sale_subscription_dashboard',
