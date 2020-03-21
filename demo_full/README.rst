@@ -10,9 +10,9 @@
    :target: https://www.gnu.org/licenses/agpl
    :alt: License: AGPL-3
 
-================================
-Demo of Multicompany Environment
-================================
+=========
+Demo Full
+=========
 
 Installation
 ============
