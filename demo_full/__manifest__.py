@@ -32,14 +32,14 @@
         'demo_simple',
 
         # adhoc modules
-        # 'ks_dashboard_ninja',
+        'ks_dashboard_ninja',
         # 'sale_order_type_ux',
         'sale_delivery_ux',
         'product_replenishment_cost',
         'product_currency',
         'l10n_ar_currency_update',
         'account_statement_move_import',
-        # 'website_sale_ux',
+        'website_sale_ux',
         'purchase_discount',
         'helpdesk_solutions',
         'stock_picking_labels',
