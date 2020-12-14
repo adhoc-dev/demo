@@ -14,6 +14,7 @@ class ResUsers(models.Model):
                 'email': 'demo@yourcompany.example.com',
                 'login': 'demo_admin',
                 'password': 'demo_admin',
+                'active': True,
             })
             user.write({
                 'groups_id': [
