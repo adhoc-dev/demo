@@ -33,8 +33,8 @@ env:
   # to get secure, run 'travis encrypt TRANSIFEX_PASSWORD=[transifex_password] -r [github_repo]'
   # example of github repo 'ingadhoc/odoo-infrastructure'
   - secure: UXo8IHxP20/7qseBeAovmDnx9B9q/TrhgAc9DFhMwhKcaGBgmSQTmq+YMnZUpW+H1V9V+DRApmg8KvAjIo7lNci41yIL8fwhdo4T6YYbkvrbwbh8ANkzfF8kk2TJN41n8Cl0DokgxR+X6+ef0XjtfJL0A1QyeX+KW+9PzsdN1XvQtEmJACsL8ILDxL0x9MFATGzx+IoZGAHhdnwuMuugImOBQ/+svSMbVYDQ2h7dQqJpwlA1Uu4KcliIO5H2NHYExag9PMzvlUYB4gJLebkJk6gAHDLlanb+0wd0Cb9swJ9yVeS3/L4lWJW+5tTIYjuG4emRZZFwCkJUADeeuXsEeuzXCSPKou7dPisDH0DzspqUmvCVco1bECR62KSdKwgxHDzILNOOJXotbEGaN06gFfla+VXuSQszig/rOyyVPZwIRA2mbBdmeUVP/hS0OS7lIM730gvYfOWT9Gq64RQDW1FeAVPt7UshuDJtWyUaP9U+DPBvomMgU4ID72603db5YLoNrsEFapG98eUgF5oMa0FpNmmadOYBeHg4y7Kprm9vo0920UdNdQu3bNAWWXCyOsPUzXaxSUZ+jBo99thURF+6zYM37qDJSjPBvdFxPEWj6YdsrJ+LN/4gcjzYUMvPfPTgMHiEMq2ECFy8ZgNA93GAYYv5+v5NiUy6J2HYYLw=
-  - TRANSIFEX_ORGANIZATION='adhoc-ee'
-  - TRANSIFEX_TEAM='116364'
+  - TRANSIFEX_ORGANIZATION='adhoc'
+  - TRANSIFEX_TEAM='46451'
 
 install:
   - if [[ "${OCA_RUNBOT}" == "1" ]]; then locale-gen es_AR.UTF-8 && locale-gen es_ES.UTF-8; fi
