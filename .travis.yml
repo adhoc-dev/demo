@@ -28,7 +28,7 @@ jobs:
         - TESTS="1" ODOO_REPO="odoo/odoo" TRANSIFEX="1"
 env:
   global:
-  - VERSION="13.0" TESTS="0" LINT_CHECK="0" TRANSIFEX="0"
+  - VERSION="15.0" TESTS="0" LINT_CHECK="0" TRANSIFEX="0"
   - TRANSIFEX_USER='jjscarafia'
   # to get secure, run 'travis encrypt TRANSIFEX_PASSWORD=[transifex_password] -r [github_repo]'
   # example of github repo 'ingadhoc/odoo-infrastructure'
