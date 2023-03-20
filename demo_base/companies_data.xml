@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="partner_muebleria_sa" model="res.partner">
+        <field name='name'>Muebleria SA</field>
+        <field name='l10n_ar_afip_responsibility_type_id' ref="l10n_ar.res_IVARI"/>
+        <field name='l10n_latam_identification_type_id' ref="l10n_ar.it_cuit"/>
+        <!-- <field name='vat'>30111111118</field> -->
+        <field name="street">Ovidio Lagos 41 bis</field>
+        <field name="city">Rosario</field>
+        <field name="country_id" ref="base.ar"/>
+        <field name="state_id" ref="base.state_ar_s"/>
+        <field name="zip">2000</field>
+        <field name="phone">+54 9 3412080203</field>
+        <field name="email">ventas@fabricademuebles.com</field>
+        <field name="website">http://www.fabricademueblessrl.com</field>
+    </record>
+
+    <record id="company_muebleria_sa" model="res.company">
+        <field name='parent_id' ref='base.main_company'/>
+        <field name='currency_id' ref='base.ARS'/>
+        <field name='partner_id' ref='partner_muebleria_sa'/>
+        <field name='name'>Muebleria SA</field>
+        <field name="l10n_ar_afip_start_date" eval="time.strftime('%Y-01-01')"/>
+        <field name='l10n_ar_gross_income_type'>local</field>
+        <field name='l10n_ar_gross_income_number'>901-21885123</field>
+    </record>
+
+    <function model="res.users" name="write">
+        <value eval="[ref('base.user_root'), ref('base.user_admin'), ref('base.user_demo')]"/>
+        <value eval="{'company_ids': [(4, ref('demo_base.company_muebleria_sa'))]}"/>
+    </function>
+</odoo>

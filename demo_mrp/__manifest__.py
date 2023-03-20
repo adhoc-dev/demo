@@ -18,7 +18,7 @@
 #
 ##############################################################################
 {
-    'name': 'Demo Data',
+    'name': 'Demo MRP',
     'version': "15.0.1.0.0",
     'category': 'Tools',
     'sequence': 14,
@@ -29,12 +29,19 @@
     'images': [
     ],
     'depends': [
-        'base',
+        'demo_retail',
+
+        # Módulos que se instalan mediante productos en nube, si vendemos estos productos se auto instalan estos módulos.
+        # como por ahora runbot ni las bases demo, implementan esta logica de auto instalar en funcion de productos,
+        # hicimos una análisis manual de que “productos” que consideramos importantes para mrp y
+        # agregamos como dependencia el modulo que instala dicho producto.
+
+        # Supply Chain/ Manufactura:
+        'mrp',
     ],
     'data': [
     ],
     'demo': [
-        'users_data.xml',
     ],
     'test': [
     ],
