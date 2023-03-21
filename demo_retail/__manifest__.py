@@ -18,8 +18,8 @@
 #
 ##############################################################################
 {
-    'name': 'Demo Data',
-    'version': "15.0.1.0.0",
+    'name': 'Demo Retail',
+    'version': "16.0.1.0.0",
     'category': 'Tools',
     'sequence': 14,
     'summary': '',
@@ -29,16 +29,34 @@
     'images': [
     ],
     'depends': [
-        'base',
+        'demo_base',
+        # Módulos que se instalan mediante productos en nube, si vendemos estos productos se auto instalan estos módulos.
+        # como por ahora runbot ni las bases demo, implementan esta logica de auto instalar en funcion de productos,
+        # hicimos una análisis manual de que “productos” que consideramos importantes para retail y
+        # agregamos como dependencia el modulo que instala dicho producto.
+
+        # Supply Chain / Inventario:
+        'stock_ux',
+        'stock_voucher',
+        # Supply Chain / Reparaciones:
+        'repair',
+
+        # A este listado sumamos los módulos que comercial nos pide agregar y que no se auto instalarían por productos.
+        # Si eventualmente implementamos logica de instalacion mediante productos la sección de arriba deberia poder borrarse.
+        'delivery',
+        'sale_order_type',
+        # 'sale_order_type_automation', agregar cuando se migre
+        'website_sale_delivery',
     ],
     'data': [
     ],
     'demo': [
+        'config_settings_data.xml',
         'users_data.xml',
     ],
     'test': [
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
     'application': False,
 }

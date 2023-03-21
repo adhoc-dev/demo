@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <function model="res.users" name="_init_demo_data"/>
+    <record id="base.user_admin" model="res.users">
+        <field name="groups_id" eval="[(4, ref('base_exception.group_exception_rule_manager')),
+                                       (4, ref('product.group_sale_pricelist')),
+                                       (4, ref('product_price_taxes_included.group_prices_with_tax')),
+                                       (4, ref('saas_client_adhoc.group_hidden_resources')),
+                                       (4, ref('uom.group_uom'))]"/>
+    </record>
+
+    <function model="res.users" name="_init_demo_admin"/>
 </odoo>

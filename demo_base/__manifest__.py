@@ -19,7 +19,7 @@
 ##############################################################################
 {
     'name': 'Demo Data',
-    'version': "15.0.1.0.0",
+    'version': "16.0.1.0.0",
     'category': 'Tools',
     'sequence': 14,
     'summary': '',
@@ -29,52 +29,82 @@
     'images': [
     ],
     'depends': [
-        # modulos que se instalarian mediante productos. Para obtener este listado
-        # filtrar en adhoc products por "Modules Auto Installed está establecida" y 
-        # agregar los "modules auto install" de los productos que se desee
-        # Finanzas / Consolidación: account_consolidation
-        # Finanzas / Contabilidad avanzada: account_accountant, saas_client_account
-        # Finanzas / Facturacion y Pagos: account, account_invoice_tax
-        # General / Aprobaciones: approvals
-        # General / Documentos: documents
-        # General / Reportería / BI / ninja / Hoja de cálculo: ks_dashboard_ninja
-        # Localizaciones / Loc Argentina: l10n_ar_account_withholding, l10n_ar_bank, l10n_ar_edi_ux
-        # Localizaciones / Loc Chile: l10n_cl_counties, l10n_cl
-        # Localizaciones / Loc USA: l10n_us
-        # Localizaciones / Loc Urugaya: l10n_uy_edi
-        # Sitio web / E-commerce: website_sale
-        # Supply Chain / Compras: purchase
-        # Ventas / CRM: crm
-        # Ventas / Ventas: sale_management
+        # Módulos que se instalan mediante productos en nube, si vendemos estos productos se auto instalan estos módulos.
+        # como por ahora runbot ni las bases demo, implementan esta logica de auto instalar en funcion de productos,
+        # hicimos una análisis manual de que “productos” que consideramos ”base” (los queremos en todas las demo) y
+        # agregamos como dependencia el modulo que instalaría dicho producto.
+
+        # Finanzas / Consolidación:
         'account_consolidation',
+        # Finanzas / Contabilidad avanzada:
         'account_accountant',
         'saas_client_account',
+        # Finanzas / Facturacion y Pagos:
         'account',
         'account_invoice_tax',
+        # General / Aprobaciones:
         'approvals',
+        # General / Documentos:
         'documents',
+        # General / Reportería / BI / ninja / Hoja de cálculo:
         'ks_dashboard_ninja',
-        'l10n_ar_account_withholding, l10n_ar_bank',
+        # Localizaciones / Loc Argentina:
+        'l10n_ar_account_withholding',
+        'l10n_ar_bank',
         'l10n_ar_edi_ux',
-        'l10n_cl_counties',
-        'l10n_cl',
-        'l10n_us',
-        'l10n_uy_edi',
+            # Localizaciones / Loc Chile:
+                # 'l10n_cl_counties',
+                # 'l10n_cl',
+            # Localizaciones / Loc USA:
+                # 'l10n_us',
+            # Localizaciones / Loc Urugaya:
+                # 'l10n_uy_edi',
+        # RRHH / Asistencias:
+        'hr_attendance',
+        # RRHH / Ausencias:
+        'hr_holidays',
+        # RRHH / Gastos:
+        'hr_expense',
+        # RRHH/ Selección de personal:
+        'hr_recruitment',
+        # Sitio web / E-commerce:
         'website_sale',
+        # Sitio web / Encuestas:
+        'survey',
+        # Sitio web / Sitio web:
+        'website',
+        # Sitio web / Social Marketing:
+        'social',
+        # Supply Chain / Compras:
         'purchase',
+        # Ventas / CRM:
         'crm',
+        # Ventas / Ventas:
         'sale_management',
-        # módulos adicionales que se suelen utilizar
-        'product_internal_code',
+
+        # A este listado sumamos los módulos que comercial nos pide agregar y que no se auto instalarían por productos.
+        # Si eventualmente implementamos logica de instalacion mediante productos la sección de arriba deberia poder borrarse.
+        'base_exception',
+        'l10n_ar_demo',
+        'loyalty',
+        'mass_mailing',
+        # 'product_internal_code', agregar cuando se migre
+        'product_planned_price',
+        'product_price_taxes_included',
+        'sale_margin',
+        'sale_quotation_builder',
+        'sale_ux',
     ],
     'data': [
     ],
     'demo': [
+        'companies_data.xml',
+        'config_settings_data.xml',
         'users_data.xml',
     ],
     'test': [
     ],
-    'installable': False,
+    'installable': True,
     'auto_install': False,
     'application': False,
 }
