@@ -18,7 +18,7 @@
 #
 ##############################################################################
 {
-    'name': 'Demo Data',
+    'name': 'Demo Base',
     'version': "16.0.1.0.0",
     'category': 'Tools',
     'sequence': 14,
@@ -52,13 +52,13 @@
         'l10n_ar_account_withholding',
         'l10n_ar_bank',
         'l10n_ar_edi_ux',
-            # Localizaciones / Loc Chile:
-                # 'l10n_cl_counties',
-                # 'l10n_cl',
-            # Localizaciones / Loc USA:
-                # 'l10n_us',
-            # Localizaciones / Loc Urugaya:
-                # 'l10n_uy_edi',
+        # Localizaciones / Loc Chile:
+        # 'l10n_cl_counties', ver
+        'l10n_cl',
+        # Localizaciones / Loc USA:
+        'l10n_us',
+        # Localizaciones / Loc Urugaya:
+        'l10n_uy_edi',
         # RRHH / Asistencias:
         'hr_attendance',
         # RRHH / Ausencias:
@@ -88,7 +88,7 @@
         'l10n_ar_demo',
         'loyalty',
         'mass_mailing',
-        # 'product_internal_code', agregar cuando se migre
+        'product_internal_code',
         'product_planned_price',
         'product_price_taxes_included',
         'sale_margin',
