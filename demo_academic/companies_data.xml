@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="l10n_ar.partner_ri" model="res.partner">
+        <field name='name'>Education Company</field>
+        <field name="email">education@company.com</field>
+        <field name="website">http://www.educationcompany.com</field>
+    </record>
+
+    <record id="l10n_ar.company_ri" model="res.company">
+        <field name='name'>Education Company</field>
+    </record>
+</odoo>
