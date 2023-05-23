@@ -8,5 +8,7 @@
                                        (4, ref('uom.group_uom'))]"/>
     </record>
 
+    <function model="base.language.install" name="_install_lenguages"/>
+
     <function model="res.users" name="_init_demo_admin"/>
 </odoo>

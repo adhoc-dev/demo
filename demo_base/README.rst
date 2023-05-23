@@ -11,7 +11,7 @@
    :alt: License: AGPL-3
 
 =========
-Demo Data
+Demo Base
 =========
 
 Installation
