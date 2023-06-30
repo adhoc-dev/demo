@@ -19,7 +19,7 @@
 ##############################################################################
 {
     'name': 'Demo Retail',
-    'version': "16.0.1.0.0",
+    'version': "16.0.1.1.0",
     'category': 'Tools',
     'sequence': 14,
     'summary': '',
@@ -57,6 +57,11 @@
     'test': [
     ],
     'installable': True,
+    'assets': {
+        'web.assets_backend': [
+            'retail_tour/static/src/js/tours/sale.js',
+        ],
+    },
     'auto_install': False,
     'application': False,
 }
