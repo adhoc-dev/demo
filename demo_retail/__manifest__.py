@@ -52,6 +52,7 @@
     ],
     'demo': [
         'config_settings_data.xml',
+        'stock_warehouse_data.xml',
         'users_data.xml',
     ],
     'test': [
