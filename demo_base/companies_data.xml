@@ -12,4 +12,18 @@
     <record id="l10n_ar.company_ri" model="res.company">
         <field name='name'>Muebleria SRL</field>
     </record>
+
+    <function model="account.chart.template" name="generate_receiptbooks">
+        <value model="res.company" eval="obj().search([('id', '=', ref('l10n_ar.company_ri'))])"/>
+    </function>
+    <function model="account.chart.template" name="generate_receiptbooks">
+        <value model="res.company" eval="obj().search([('id', '=', ref('l10n_uy_account.company_uy'))])"/>
+    </function>
+    <function model="account.chart.template" name="generate_receiptbooks">
+        <value model="res.company" eval="obj().search([('id', '=', ref('l10n_cl.demo_company_cl'))])"/>
+    </function>
+    <function model="account.chart.template" name="generate_receiptbooks">
+        <value model="res.company" eval="obj().search([('id', '=', ref('base.main_company'))])"/>
+    </function>
+
 </odoo>

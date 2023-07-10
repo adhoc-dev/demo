@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="l10n_ar_website_sale.default_website_ri" model="website">
+        <field name="name">Muebleria SRL Website</field>
+    </record>
+
+    <record id="default_website_uy" model="website">
+        <field name="name">(UY) Company Website</field>
+        <field name="company_id" ref="l10n_uy_account.company_uy"/>
+    </record>
+    <function model="payment.provider" name="copy">
+        <value eval="[ref('payment.payment_provider_transfer')]"/>
+        <value eval="{'company_id': ref('l10n_uy_account.company_uy'), 'state': 'enabled'}"/>
+    </function>
+    <function model="product.pricelist" name="write">
+        <value model="product.pricelist" eval="obj().search([('currency_id', '=', ref('base.UYU')), ('company_id', '=', ref('l10n_uy_account.company_uy'))]).id"/>
+        <value model="website" eval="{'sequence': 1, 'website_id': ref('demo_base.default_website_uy')}"/>
+    </function>
+
+    <record id="default_website_cl" model="website">
+        <field name="name">CL Company Website</field>
+        <field name="company_id" ref="l10n_cl.demo_company_cl"/>
+    </record>
+    <function model="payment.provider" name="copy">
+        <value eval="[ref('payment.payment_provider_transfer')]"/>
+        <value eval="{'company_id': ref('l10n_cl.demo_company_cl'), 'state': 'enabled'}"/>
+    </function>
+    <function model="product.pricelist" name="write">
+        <value model="product.pricelist" eval="obj().search([('currency_id', '=', ref('base.CLP')), ('company_id', '=', ref('l10n_cl.demo_company_cl'))]).id"/>
+        <value model="website" eval="{'sequence': 1, 'website_id': ref('demo_base.default_website_cl')}"/>
+    </function>
+
+</odoo>

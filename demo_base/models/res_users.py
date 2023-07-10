@@ -25,6 +25,7 @@ class ResUsers(models.Model):
                     (3, self.env.ref('l10n_cl.demo_company_cl').id, 0)],
                 'company_id': self.env.ref('l10n_ar.company_ri').id
             })
+            user.action_create_employee()
         if not self.search([('login', '=', 'admin_uy')]):
             user = self.env.ref('base.user_admin').copy({
                 'name': 'Valentino',
@@ -41,6 +42,7 @@ class ResUsers(models.Model):
                     (3, self.env.ref('l10n_cl.demo_company_cl').id, 0)],
                 'company_id': self.env.ref('l10n_uy_account.company_uy').id
             })
+            user.action_create_employee()
         if not self.search([('login', '=', 'admin_cl')]):
             user = self.env.ref('base.user_admin').copy({
                 'name': 'Valentino',
@@ -57,6 +59,7 @@ class ResUsers(models.Model):
                     (3, self.env.ref('l10n_uy_account.company_uy').id, 0)],
                 'company_id': self.env.ref('l10n_cl.demo_company_cl').id
             })
+            user.action_create_employee()
         if not self.search([('login', '=', 'admin_us')]):
             user = self.env.ref('base.user_admin').copy({
                 'name': 'Valentino',
@@ -73,3 +76,4 @@ class ResUsers(models.Model):
                     (3, self.env.ref('l10n_cl.demo_company_cl').id, 0)],
                 'company_id': self.env.ref('base.main_company').id
             })
+            user.action_create_employee()
