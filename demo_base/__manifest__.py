@@ -88,6 +88,7 @@
         'l10n_ar_demo',
         'loyalty',
         'mass_mailing',
+        'payment_demo',
         'product_internal_code',
         'product_planned_price',
         'product_price_taxes_included',
@@ -100,7 +101,10 @@
     'demo': [
         'companies_data.xml',
         'config_settings_data.xml',
+        'hr_data.xml',
+        'payment_provider_data.xml',
         'users_data.xml',
+        'website_demo.xml',
     ],
     'test': [
     ],

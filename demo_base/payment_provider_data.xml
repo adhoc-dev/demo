@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="payment_provider_arg" model="payment.provider">
+        <field name="name">Demo Ar</field>
+        <field name="image_128" type="base64" file="payment_demo/static/description/icon.png"/>
+        <field name="code">demo</field>
+        <field name="inline_form_view_id" ref="payment_demo.inline_form"/>
+        <field name="token_inline_form_view_id" ref="payment_demo.token_inline_form"/>
+        <field name="allow_tokenization">True</field>
+        <field name="state">test</field>
+        <field name="company_id" ref="l10n_ar.company_ri"/>
+        <field name="journal_id" model="account.journal" search="[('type', '=', 'bank'), ('company_id', '=', ref('l10n_ar.company_ri'))]"/>
+    </record>
+    <function model="payment.provider" name="action_toggle_is_published">
+        <value eval="ref('demo_base.payment_provider_arg')"/>
+    </function>
+
+    <record id="payment_provider_uy" model="payment.provider">
+        <field name="name">Demo Uy</field>
+        <field name="image_128" type="base64" file="payment_demo/static/description/icon.png"/>
+        <field name="code">demo</field>
+        <field name="inline_form_view_id" ref="payment_demo.inline_form"/>
+        <field name="token_inline_form_view_id" ref="payment_demo.token_inline_form"/>
+        <field name="allow_tokenization">True</field>
+        <field name="state">test</field>
+        <field name="company_id" ref="l10n_uy_account.company_uy"/>
+        <field name="journal_id" model="account.journal" search="[('type', '=', 'bank'), ('company_id', '=', ref('l10n_uy_account.company_uy'))]"/>
+    </record>
+    <function model="payment.provider" name="action_toggle_is_published">
+        <value eval="ref('demo_base.payment_provider_uy')"/>
+    </function>
+
+    <record id="payment_provider_cl" model="payment.provider">
+        <field name="name">Demo Cl</field>
+        <field name="image_128" type="base64" file="payment_demo/static/description/icon.png"/>
+        <field name="code">demo</field>
+        <field name="inline_form_view_id" ref="payment_demo.inline_form"/>
+        <field name="token_inline_form_view_id" ref="payment_demo.token_inline_form"/>
+        <field name="allow_tokenization">True</field>
+        <field name="state">test</field>
+        <field name="company_id" ref="l10n_cl.demo_company_cl"/>
+        <field name="journal_id" model="account.journal" search="[('type', '=', 'bank'), ('company_id', '=', ref('l10n_cl.demo_company_cl'))]"/>
+    </record>
+    <function model="payment.provider" name="action_toggle_is_published">
+        <value eval="ref('demo_base.payment_provider_cl')"/>
+    </function>
+</odoo>
