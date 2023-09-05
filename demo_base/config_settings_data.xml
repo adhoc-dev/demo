@@ -9,5 +9,5 @@
                                          (3, ref('purchase.group_send_reminder'))]"/>
     </record>
 
-    <function model="res.config.settings" name="_init_settings"/>
+    <function model="res.config.settings" name="_init_demo"/>
 </odoo>
