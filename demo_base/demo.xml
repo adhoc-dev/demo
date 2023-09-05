@@ -8,7 +8,8 @@
                                        (4, ref('uom.group_uom'))]"/>
     </record>
 
-    <function model="base.language.install" name="_install_lenguages"/>
+    <function model="base.language.install" name="_init_demo"/>
 
-    <function model="res.users" name="_init_demo_admin"/>
+    <function model="res.users" name="_init_demo"/>
+    <function model="sale.order" name="_init_demo"/>
 </odoo>

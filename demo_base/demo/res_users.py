@@ -6,7 +6,7 @@ class ResUsers(models.Model):
     _inherit = 'res.users'
 
     @api.model
-    def _init_demo_admin(self):
+    def _init_demo(self):
         # creamos usuarios igual a admin pero restringimos compañías
         if not self.search([('login', '=', 'admin_ar')]):
             user = self.env.ref('base.user_admin').copy({
