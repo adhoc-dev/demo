@@ -33,6 +33,7 @@
         'demo_rental',
         'demo_retail',
         'demo_services',
+        'sale_tour',
     ],
     'data': [
     ],
