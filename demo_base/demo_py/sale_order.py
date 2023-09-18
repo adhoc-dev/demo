@@ -6,7 +6,7 @@ class ResUsers(models.Model):
     _inherit = 'sale.order'
 
     @api.model
-    def _init_demo(self):
+    def _init_demo_base(self):
         # cl
         cl_c = self.env.ref('l10n_cl.demo_company_cl')
         # uy

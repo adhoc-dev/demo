@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
     <record id="base.group_user" model="res.groups">
         <field name="implied_ids" eval="[(4, ref('stock_account.group_lot_on_invoice')),
                                          (4, ref('stock.group_lot_on_delivery_slip')),
                                          (4, ref('stock.group_stock_multi_locations'))]"/>
     </record>
 
-    <function model="res.config.settings" name="_location_settings"/>
 </odoo>

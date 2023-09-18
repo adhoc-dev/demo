@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
+    <!-- grupos que tipicamente se configuran desde config settings para activar opciones  -->
     <record id="base.group_user" model="res.groups">
         <field name="implied_ids" eval="[(4, ref('account.group_delivery_invoice_address')),
                                          (4, ref('crm.group_use_lead')),
@@ -9,5 +11,4 @@
                                          (3, ref('purchase.group_send_reminder'))]"/>
     </record>
 
-    <function model="res.config.settings" name="_init_demo"/>
 </odoo>

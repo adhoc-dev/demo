@@ -1,10 +1,10 @@
 from odoo import api, models
 
 
-class Department(models.Model):
+class HrJob(models.Model):
 
-    _inherit = 'hr.department'
+    _inherit = 'hr.job'
 
     @api.model
-    def _delete_company(self):
+    def _init_demo_base(self):
         self.search([]).write({'company_id': False})

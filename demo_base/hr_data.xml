@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <function model="hr.applicant" name="_delete_company"/>
-
-    <function model="hr.department" name="_delete_company"/>
-
-    <function model="hr.job" name="_delete_company"/>
-</odoo>
