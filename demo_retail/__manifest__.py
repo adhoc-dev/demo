@@ -51,9 +51,9 @@
     'data': [
     ],
     'demo': [
-        'config_settings_data.xml',
-        'stock_warehouse_data.xml',
-        'users_data.xml',
+        'demo/init_demo_py.xml',
+        'demo/res_users_demo.xml',
+        'demo/res_groups_demo.xml',
     ],
     'test': [
     ],

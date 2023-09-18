@@ -6,7 +6,7 @@ class ResUsers(models.Model):
     _inherit = 'res.users'
 
     @api.model
-    def _update_demo_admin(self):
+    def _init_demo_retail(self):
         # demo_admin groups
         admin_ar = self.search([('login', '=', 'admin_ar')])
         admin_uy = self.search([('login', '=', 'admin_uy')])

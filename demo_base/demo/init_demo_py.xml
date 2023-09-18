@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <function model="res.config.settings" name="_init_demo_base"/>
+    <function model="base.language.install" name="_init_demo_base"/>
+    <function model="res.users" name="_init_demo_base"/>
+    <function model="hr.applicant" name="_init_demo_base"/>
+    <function model="hr.department" name="_init_demo_base"/>
+    <function model="hr.job" name="_init_demo_base"/>
+    <!-- <function model="sale.order" name="_init_demo_base"/> -->
+</odoo>

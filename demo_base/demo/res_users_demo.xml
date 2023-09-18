@@ -7,9 +7,4 @@
                                        (4, ref('saas_client_adhoc.group_hidden_resources')),
                                        (4, ref('uom.group_uom'))]"/>
     </record>
-
-    <function model="base.language.install" name="_init_demo"/>
-
-    <function model="res.users" name="_init_demo"/>
-    <function model="sale.order" name="_init_demo"/>
 </odoo>

@@ -99,12 +99,12 @@
     'data': [
     ],
     'demo': [
-        'companies_data.xml',
-        'config_settings_data.xml',
-        'hr_data.xml',
-        'payment_provider_data.xml',
-        'users_data.xml',
-        'website_demo.xml',
+        'demo/companies_demo.xml',
+        'demo/init_demo_py.xml',
+        'demo/payment_provider_demo.xml',
+        'demo/res_users_demo.xml',
+        'demo/res_groups_demo.xml',
+        'demo/website_demo.xml',
     ],
     'test': [
     ],

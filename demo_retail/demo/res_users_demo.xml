@@ -3,6 +3,4 @@
     <record id="base.user_admin" model="res.users">
         <field name="groups_id" eval="[(4, ref('stock.group_stock_multi_warehouses'))]"/>
     </record>
-
-    <function model="res.users" name="_update_demo_admin"/>
 </odoo>
