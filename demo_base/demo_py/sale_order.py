@@ -1,7 +1,7 @@
 from odoo import api, models
 
 
-class ResUsers(models.Model):
+class SaleOrder(models.Model):
 
     _inherit = 'sale.order'
 

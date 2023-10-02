@@ -1,7 +1,7 @@
 from odoo import api, models
 
 
-class ResUsers(models.Model):
+class PurchaseOrder(models.Model):
 
     _inherit = 'purchase.order'
 
@@ -24,3 +24,5 @@ class ResUsers(models.Model):
                     new_purchase.button_confirm()
                 elif purchase.state == 'sent':
                     new_purchase.action_rfq_send()
+                elif purchase.state == 'done':
+                    new_purchase.button_done()

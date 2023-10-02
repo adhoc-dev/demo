@@ -160,11 +160,11 @@
     ],
     'demo': [
         'demo/companies_demo.xml',
-        'demo/init_demo_py.xml',
         'demo/payment_provider_demo.xml',
         'demo/res_users_demo.xml',
         'demo/res_groups_demo.xml',
         'demo/website_demo.xml',
+        'demo/init_demo_py.xml',
     ],
     'test': [
     ],
