@@ -3,7 +3,7 @@
 from odoo.tests import HttpCase, tagged
 
 
-@tagged('post_install', '-at_install')
+@tagged('retail', 'post_install', '-at_install')
 class TestSaleSignature(HttpCase):
 
     def test_01_portal_sale_signature_tour(self):
