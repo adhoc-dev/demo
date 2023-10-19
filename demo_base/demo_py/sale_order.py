@@ -20,9 +20,9 @@ class SaleOrder(models.Model):
                 new_sale_website_id = False
                 if sale.website_id:
                     new_sale_website_id = self.env['website'].search([('company_id', '=', company.id)], limit=1).id
-                new_sale = sale.copy(default={'company_id': company.id, 'website_id': new_sale_website_id})
-                new_sale._recompute_taxes()
-                # TODO verificar si toma bien los impuestos
+                # new_sale = sale.copy(default={'company_id': company.id, 'website_id': new_sale_website_id})
+                new_sale = sale.copy()
+                new_sale.write({'company_id': company.id, 'website_id': new_sale_website_id})
                 if sale.state == 'sale':
                     new_sale.action_confirm()
                 elif sale.state == 'sent':
