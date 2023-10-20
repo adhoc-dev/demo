@@ -15,6 +15,7 @@
     'assets': {
         'web.assets_backend': [
             'sale_tour/static/src/js/tours/sale.js',
+            'sale_tour/static/src/js/tours/multicompany.js',
         ],
     },
     'license': 'LGPL-3',
