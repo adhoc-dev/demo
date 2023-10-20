@@ -54,6 +54,7 @@
         'demo/init_demo_py.xml',
         'demo/res_users_demo.xml',
         'demo/res_groups_demo.xml',
+        'demo/stock_book_demo.xml',
     ],
     'test': [
     ],
