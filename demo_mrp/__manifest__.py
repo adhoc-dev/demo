@@ -42,6 +42,7 @@
     'data': [
     ],
     'demo': [
+        'demo/mrp_demo.xml'
     ],
     'test': [
     ],

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <!-- Create extra MOs that will have stock.valuation.layers + can be used to populate reports -->
+    <record id="mrp_production_drawer_2" model="mrp.production">
+        <field name="product_id" ref="product.product_product_1"/>
+        <field name="product_uom_id" ref="uom.product_uom_unit"/>
+        <field name="product_qty">5</field>
+        <field name="location_src_id" ref="stock.stock_location_stock"/>
+        <field name="location_dest_id" ref="stock.stock_location_stock"/>
+        <field name="bom_id" ref="mrp.mrp_bom_drawer"/>
+        <field name="create_date" eval="(datetime.now() - relativedelta(weeks=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_planned_start" eval="(datetime.now() - relativedelta(weeks=2)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+
+    <record id="mrp_production_drawer_3" model="mrp.production">
+        <field name="product_id" ref="product.product_product_10"/>
+        <field name="product_uom_id" ref="uom.product_uom_unit"/>
+        <field name="product_qty">3</field>
+        <field name="location_src_id" ref="stock.stock_location_stock"/>
+        <field name="location_dest_id" ref="stock.stock_location_stock"/>
+        <field name="bom_id" ref="mrp.mrp_bom_drawer"/>
+        <field name="create_date" eval="(datetime.now() - relativedelta(weeks=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+        <field name="date_planned_start" eval="(datetime.now() - relativedelta(weeks=1)).strftime('%Y-%m-%d %H:%M:%S')"/>
+    </record>
+</odoo>
