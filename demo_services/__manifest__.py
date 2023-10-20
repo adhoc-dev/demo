@@ -35,8 +35,10 @@
         # hicimos una análisis manual de que “productos” que consideramos importantes para retail y
         # agregamos como dependencia el modulo que instala dicho producto.
 
+        # sacamos por ahora modulo event porque manda a renderizar PDFS y nos falla porque todavia
+        # no esta el odoo escuchando y no puede convertir
         # Sitio web / Eventos:
-        'event',
+        # 'event',
         # Servicios / Field Service:
         'industry_fsm',
         # Servicios / Mesa de ayuda:
@@ -50,7 +52,7 @@
 
         # A este listado sumamos sumamos los módulos que comercial nos pide agregar y que no se auto instalarían por productos.
         # Si eventualmente implementamos logica de instalacion mediante productos la sección de arriba deberia poder borrarse.
-        'event_sale',
+        # 'event_sale',
 
     ],
     'data': [
