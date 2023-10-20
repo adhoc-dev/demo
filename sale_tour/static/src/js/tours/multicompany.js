@@ -7,11 +7,11 @@ odoo.define('sale_tour.multicompany', function(require) {
 
     const { markup } = owl;
 
-    // Seleccione la compania AR Inscripto y quedar ahi parado
-    // Ver que esten seleccionados las otras companias en con la tilde
-    // Crear una factura de cliente
-    // Ir y cambiar el diario y sleeccionar un diario de otra compania 
-    // Guardar la factura.
+    // Paso 1: Seleccione la compania AR Inscripto y quedar ahi parado
+    // Paso 2: Ver que esten seleccionados las otras companias en con la tilde
+    // Paso 3: Crear una factura de cliente
+    // Paso 4: Ir y cambiar el diario y sleeccionar un diario de otra compania 
+    // Paso 5: Guardar la factura.
 
     const steps =  [tour.stepUtils.showAppsMenuItem(),
         {
