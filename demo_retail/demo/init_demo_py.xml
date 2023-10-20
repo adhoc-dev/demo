@@ -3,5 +3,5 @@
     <function model="res.config.settings" name="_init_demo_retail"/>
     <function model="res.users" name="_init_demo_retail"/>
     <function model="stock.warehouse" name="_init_demo_retail"/>
-    <!-- <function model="website" name="_init_demo_retail"/> -->
+    <function model="website" name="_init_demo_retail"/>
 </odoo>
