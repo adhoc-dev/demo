@@ -113,7 +113,7 @@
         'account_balance_import',
         'product_price_taxes_included',
         'sale_quotation_products',
-        # 'l10n_ar_sale',
+        'l10n_ar_sale',
         'product_ux',
         'account_invoice_tax',
         'account_multicompany_ux',
@@ -121,7 +121,7 @@
         'purchase_quotation_products',
 
         # estos falta revisar y mandar a alguno de los verticales
-        
+
         # 'delivery_ux',
         # 'stock_picking_sale_order_link',
         # 'stock_picking_invoice_link',
