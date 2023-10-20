@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record model="stock.book" id="stock_book_1" forcecreate="False">
+        <field name="name">Comprobante de Entrega(monotributista)</field>
+        <field name="sequence_id" ref="stock_voucher.stock_book_sequence_1"/>
+        <field name="lines_per_voucher" eval="0"/>
+        <field name="company_id" ref="l10n_ar.company_mono"/>
+    </record>
+     <record model="stock.book" id="stock_book_2" forcecreate="False">
+        <field name="name">Comprobante de Entrega(exento)</field>
+        <field name="sequence_id" ref="stock_voucher.stock_book_sequence_1"/>
+        <field name="lines_per_voucher" eval="0"/>
+        <field name="company_id" ref="l10n_ar.company_exento"/>
+    </record>
+     <record model="stock.book" id="stock_book_3" forcecreate="False">
+        <field name="name">Comprobante de Entrega(SRL)</field>
+        <field name="sequence_id" ref="stock_voucher.stock_book_sequence_1"/>
+        <field name="lines_per_voucher" eval="0"/>
+        <field name="company_id" ref="l10n_ar.company_ri"/>
+    </record>
+</odoo>
