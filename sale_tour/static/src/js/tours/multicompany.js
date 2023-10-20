@@ -9,9 +9,11 @@ odoo.define('sale_tour.multicompany', function(require) {
 
     // Paso 1: Seleccione la compania AR Inscripto y quedar ahi parado
     // Paso 2: Ver que esten seleccionados las otras companias en con la tilde
-    // Paso 3: Crear una factura de cliente
-    // Paso 4: Ir y cambiar el diario y sleeccionar un diario de otra compania 
-    // Paso 5: Guardar la factura.
+    // Paso 3: Crear una orden de venta a ADHOC
+    // Paso 4: Validar y confirmar la orden de venta
+    // Paso 5: Crear una factura de cliente a partir de esta venta
+    // Paso 6: Ir y cambiar el diario y sleeccionar un diario de otra compania 
+    // Paso 7: Guardar la factura.
 
     const steps =  [tour.stepUtils.showAppsMenuItem(),
         {
