@@ -47,6 +47,7 @@
         'sale_order_type',
         # 'sale_order_type_automation', agregar cuando se migre
         'website_sale_delivery',
+        'theme_loftspace',
     ],
     'data': [
     ],
