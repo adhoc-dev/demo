@@ -112,6 +112,35 @@ odoo.define('sale_tour.multicompany', function(require) {
         position: "bottom",
         edition: "enterprise",
         run: "click"
+    }, {
+        trigger: "button[name='action_view_delivery']",
+        content: _t("step 3"),
+        position: "bottom",
+        edition: "enterprise",
+        run: "click"
+    }, {
+        trigger: ".o_field_widget[name='quantity_done']",
+        content: _t("Click here to add some products or services to your quotation."),
+        position: "bottom",
+    }, {
+        trigger: ".o_field_widget[name='product_id'], .o_field_widget[name='product_template_id']",
+        extra_trigger: ".o_sale_order",
+        content: _t("Select a product, or create a new one on the fly."),
+        position: "right",
+        run: function (actions) {
+            var $input = this.$anchor.find("input");
+            actions.text("[FURN_8855] Drawer", $input.length === 0 ? this.$anchor : $input);
+            // fake keydown to trigger search
+            var keyDownEvent = jQuery.Event("keydown");
+            keyDownEvent.which = 42;
+            this.$anchor.trigger(keyDownEvent);
+            var $descriptionElement = $(".o_form_editable textarea[name='name']");
+            // when description changes, we know the product has been created
+            $descriptionElement.change(function () {
+                $descriptionElement.addClass("product_creation_success");
+            });
+        },
+        id: "product_selection_step"
     },
  ]
      tour.register("adhoc_tour_multicompany", {
