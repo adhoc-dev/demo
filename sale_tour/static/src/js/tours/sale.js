@@ -76,3 +76,4 @@ odoo.define('sale_tour.tour', function(require) {
         sequence: 20,
     }, steps);
 });
+

@@ -4,6 +4,7 @@ odoo.define('sale_tour.multicompany', function(require) {
     const {_t} = require('web.core');
     const {Markup} = require('web.utils');
     var tour = require('web_tour.tour');
+    var tourStepUtils = require('web_tour.TourStepUtils');
 
     const { markup } = owl;
 
@@ -12,6 +13,9 @@ odoo.define('sale_tour.multicompany', function(require) {
     // Paso 3: Crear una orden de venta a ADHOC
     // Paso 4: Validar y confirmar la orden de venta
     // Paso 5: Crear una factura de cliente a partir de esta venta
+
+    // Frenamos acá porque esperamos nuevo desarrollo de cambio de diario en facturas.
+
     // Paso 6: Ir y cambiar el diario y sleeccionar un diario de otra compania 
     // Paso 7: Guardar la factura.
 
@@ -119,29 +123,54 @@ odoo.define('sale_tour.multicompany', function(require) {
         edition: "enterprise",
         run: "click"
     }, {
-        trigger: ".o_field_widget[name='quantity_done']",
-        content: _t("Click here to add some products or services to your quotation."),
+        trigger: "button[name='button_validate']",
+        content: _t("step 3"),
         position: "bottom",
+        edition: "enterprise",
+        run: "click"
     }, {
-        trigger: ".o_field_widget[name='product_id'], .o_field_widget[name='product_template_id']",
-        extra_trigger: ".o_sale_order",
-        content: _t("Select a product, or create a new one on the fly."),
-        position: "right",
-        run: function (actions) {
-            var $input = this.$anchor.find("input");
-            actions.text("[FURN_8855] Drawer", $input.length === 0 ? this.$anchor : $input);
-            // fake keydown to trigger search
-            var keyDownEvent = jQuery.Event("keydown");
-            keyDownEvent.which = 42;
-            this.$anchor.trigger(keyDownEvent);
-            var $descriptionElement = $(".o_form_editable textarea[name='name']");
-            // when description changes, we know the product has been created
-            $descriptionElement.change(function () {
-                $descriptionElement.addClass("product_creation_success");
-            });
-        },
-        id: "product_selection_step"
+        trigger: "button[name='process']",
+        content: _t("step 3"),
+        position: "bottom",
+        edition: "enterprise",
+        run: "click"
     },
+    {
+        content: "Breadcrumb back to Bank Reconciliation from INV/2019/00002",
+        trigger: ".o_back_button a, .breadcrumb-item:not('.active'):last",
+        run: "click"
+    },{
+        trigger: "button[id='create_invoice']",
+        content: _t("step 3"),
+        position: "bottom",
+        edition: "enterprise",
+        run: "click"
+    },{
+        trigger: "button[id='create_invoice_open']",
+        content: _t("step 3"),
+        position: "bottom",
+        edition: "enterprise",
+        run: "click"
+    },
+    {
+        // trigger: 'button[data-menu-xmlid="account_multicompany_ux.action_account_change_company"]',
+        trigger: "button[data-tooltip='Change Company']",
+        content: _t("Selecciona lapiz"),
+        position: "bottom",
+        edition: "enterprise",
+        run: "click"
+    },
+
+    // Aqui iria lo del nuevo desarrollo relacionado al nuevo wizard para cambiar de diario 
+
+    // Pasos que siguen:
+    // {
+    //     trigger: "button[name='action_post']",
+    //     content: _t("step 3"),
+    //     position: "bottom",
+    //     edition: "enterprise",
+    //     run: "click"
+    // },
  ]
      tour.register("adhoc_tour_multicompany", {
          url: "/web",
