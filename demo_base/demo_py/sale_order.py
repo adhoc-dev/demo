@@ -16,13 +16,15 @@ class SaleOrder(models.Model):
         # us (main_company)
         us_c = self.env.ref('base.main_company')
         for company in ar_c + uy_c + cl_c:
+            new_sale_website_id = False
+            new_sale_website_id = self.env['website'].search([('company_id', '=', company.id)], limit=1).id
             for sale in self.env['sale.order'].search([('company_id', '=', us_c.id)]):
-                new_sale_website_id = False
-                if sale.website_id:
-                    new_sale_website_id = self.env['website'].search([('company_id', '=', company.id)], limit=1).id
                 # new_sale = sale.copy(default={'company_id': company.id, 'website_id': new_sale_website_id})
                 new_sale = sale.copy()
-                new_sale.write({'company_id': company.id, 'website_id': new_sale_website_id})
+                vals = {'company_id': company.id}
+                if sale.website_id:
+                    vals['website_id'] = new_sale_website_id
+                new_sale.write(vals)
                 if sale.state == 'sale':
                     new_sale.action_confirm()
                 elif sale.state == 'sent':
