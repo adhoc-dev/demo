@@ -19,8 +19,7 @@ class SaleOrder(models.Model):
             new_sale_website_id = False
             new_sale_website_id = self.env['website'].search([('company_id', '=', company.id)], limit=1).id
             for sale in self.env['sale.order'].search([('company_id', '=', us_c.id)]):
-                # new_sale = sale.copy(default={'company_id': company.id, 'website_id': new_sale_website_id})
-                new_sale = sale.copy()
+                new_sale = sale.with_company(company).copy()
                 vals = {'company_id': company.id}
                 if sale.website_id:
                     vals['website_id'] = new_sale_website_id
