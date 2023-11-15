@@ -6,6 +6,6 @@
     <function model="hr.applicant" name="_init_demo_base"/>
     <function model="hr.department" name="_init_demo_base"/>
     <function model="hr.job" name="_init_demo_base"/>
-    <function model="sale.order" name="_init_demo_base"/>
+    <!-- <function model="sale.order" name="_init_demo_base"/> -->
     <function model="purchase.order" name="_init_demo_base"/>
 </odoo>
