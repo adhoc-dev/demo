@@ -189,7 +189,7 @@ odoo.define('demo_tour.multicompany', function(require) {
     //     run: "click"
     // },
  ]
-     tour.register("ganancias.jsmulticompany", {
+     tour.register("adhoc_tour_multicompany", {
          url: "/web",
          sequence: 20,
      }, steps);
