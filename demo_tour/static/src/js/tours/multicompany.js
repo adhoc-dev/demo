@@ -1,4 +1,4 @@
-odoo.define('sale_tour.multicompany', function(require) {
+odoo.define('demo_tour.multicompany', function(require) {
     "use strict";
 
     const {_t} = require('web.core');

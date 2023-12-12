@@ -1,9 +1,8 @@
 {
-    'name': 'Sales',
+    'name': 'Demo Tour',
     "version": "16.0.1.0.0",
     'category': 'Sales/Sales',
-    'summary': 'Sales tour',
-    'description': 'This module contains sales tour',
+    'description': 'Integration Tests using Odoo Tours',
     'depends': [
         'sale_management',
     ],
@@ -14,8 +13,8 @@
     'installable': True,
     'assets': {
         'web.assets_backend': [
-            'sale_tour/static/src/js/tours/sale.js',
-            'sale_tour/static/src/js/tours/multicompany.js',
+            'demo_tour/static/src/js/tours/sale.js',
+            'demo_tour/static/src/js/tours/multicompany.js',
         ],
     },
     'license': 'LGPL-3',

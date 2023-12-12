@@ -7,7 +7,7 @@ from odoo.tests import HttpCase, tagged
 class TestSaleSignature(HttpCase):
 
     def test_01_portal_sale_signature_tour(self):
-        self.start_tour("/web", 'sale_tour.sale', login="admin")
+        self.start_tour("/web", 'demo_tour.sale', login="admin")
 
     def test_02_multicompany(self):
-        self.start_tour("/web", 'sale_tour.multicompany', login="admin")
+        self.start_tour("/web", 'demo_tour.multicompany', login="admin")

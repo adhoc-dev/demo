@@ -1,4 +1,4 @@
-odoo.define('sale_tour.tour', function(require) {
+odoo.define('demo_tour.sale_tour', function(require) {
     "use strict";
 
     const {_t} = require('web.core');
@@ -70,7 +70,7 @@ odoo.define('sale_tour.tour', function(require) {
         run: "click"
     },
 ]
-    tour.register("sale_tour_adhoc", {
+    tour.register("adhoc_tour_sale", {
         url: "/web",
         rainbowMan: true,
         sequence: 20,
