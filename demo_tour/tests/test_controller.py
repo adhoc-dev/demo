@@ -11,3 +11,6 @@ class TestSaleSignature(HttpCase):
 
     def test_02_multicompany(self):
         self.start_tour("/web", 'demo_tour.multicompany', login="admin")
+
+    def test_03_ganancias(self):
+        self.start_tour("/web", 'demo_tour.ganancias', login="admin")
