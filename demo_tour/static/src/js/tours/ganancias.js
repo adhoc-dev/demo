@@ -9,9 +9,27 @@ odoo.define('demo_tour.sale_tour', function(require) {
 
     const steps =  [
 
-        // 1. Dirigirse al menú “Pagos de Proveedor”
-        // 2. Crear un nuevo pago de proveedor.
-        // 3. Seleccionar el proveedor “ADHOC SA“.
+        tour.stepUtils.showAppsMenuItem(), {
+            trigger: ".o_menuitem[data-menu-xmlid='data-menu-xmlid='account_payment_group.menu_action_account_payments_group_payable']",
+            content: _t("Paso 1 - Ir al menú 'Pagos de Proveedor'"),
+            position: "bottom",
+            edition: "enterprise"
+        }, {
+            trigger: "button.btn-primary.o_list_button_add",
+            content: _t("Paso 2 - Crear un nuevo pago de proveedor"),
+            position: "bottom",
+            edition: "enterprise",
+            run: "click"
+        }, {
+            trigger: ".o_field_res_partner_many2one[name='partner_id']",
+            extra_trigger: ".o_sale_order",
+            content: _t("Paso 3 - Seleccionar el proveedor 'ADHOC SA'"),
+            position: "right",
+            run: function (actions) {
+                actions.text("ADHOC SA", this.$anchor.find("input"));
+            },
+        },
+
         // 4. Verificar en el pago que se trae por defecto el número de régimen configurando en la data demo. Que seria el 21
         // 5. Congigurar store “Shared Store (No company)” (no es realmente necesario para el test, pero si nom nos deja continuar para guardar el pago)
         // 6. Ir a la pestana deudas, y limpiar el campo to_pay_move_line_ids

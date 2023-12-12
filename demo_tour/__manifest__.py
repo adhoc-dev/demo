@@ -15,7 +15,7 @@
         'web.assets_backend': [
             'demo_tour/static/src/js/tours/sale.js',
             'demo_tour/static/src/js/tours/multicompany.js',
-            'demo_tour/static/src/js/tours/ganancias.js',
+            # 'demo_tour/static/src/js/tours/ganancias.js',
         ],
     },
     'license': 'LGPL-3',
