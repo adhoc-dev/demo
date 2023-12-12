@@ -9,15 +9,22 @@ odoo.define('demo_tour.multicompany', function(require) {
     const { markup } = owl;
 
     // Paso 1: Seleccione la compania AR Inscripto y quedar ahi parado
+
+    // TODO Probar si funciona y descomentar
+    // {
+    //     trigger: "body > header > nav > div > div.o-dropdown.dropdown.o_switch_company_menu.d-none.d-md-block.o-dropdown--no-caret > button",
+    //     content: _t("Step 1: Open multicompany dropdown"),
+    //     position: "bottom",
+    //     edition: "enterprise"
+    // },
+    // {
+    //     trigger: ".log_into[aria-label='Switch to (AR) Responsable Inscripto']",
+    //     content: _t("Step 2: Select (AR) Responsable Inscripto company"),
+    //     position: "bottom",
+    //     edition: "enterprise"
+    // },
+
     // Paso 2: Ver que esten seleccionados las otras companias en con la tilde
-    // Paso 3: Crear una orden de venta a ADHOC
-    // Paso 4: Validar y confirmar la orden de venta
-    // Paso 5: Crear una factura de cliente a partir de esta venta
-
-    // Frenamos acá porque esperamos nuevo desarrollo de cambio de diario en facturas.
-
-    // Paso 6: Ir y cambiar el diario y sleeccionar un diario de otra compania 
-    // Paso 7: Guardar la factura.
 
     const steps =  [tour.stepUtils.showAppsMenuItem(),
         // {
@@ -54,7 +61,9 @@ odoo.define('demo_tour.multicompany', function(require) {
         //     edition: "enterprise",
         //     run: "click"
         // },
-        {
+        
+    // Paso 3: Crear una orden de venta a ADHOC
+    {
         trigger: ".o_menuitem[data-menu-xmlid='sale.sale_menu_root']",
         content: _t("Open Sales app to send your first quotation in a few clicks."),
         position: "bottom",
@@ -110,7 +119,9 @@ odoo.define('demo_tour.multicompany', function(require) {
         content: Markup(_t("<b>Set a price</b>.")),
         position: "right",
         run: "text 10.0"
-    }, {
+    },
+    // Paso 4: Validar y confirmar la orden de venta
+    {
         trigger: "button[name='action_confirm']",
         content: _t("step 3"),
         position: "bottom",
@@ -139,7 +150,10 @@ odoo.define('demo_tour.multicompany', function(require) {
         content: "Breadcrumb back to Bank Reconciliation from INV/2019/00002",
         trigger: ".o_back_button a, .breadcrumb-item:not('.active'):last",
         run: "click"
-    },{
+    },
+    // Paso 5: Crear una factura de cliente a partir de esta venta
+    // Frenamos acá porque esperamos nuevo desarrollo de cambio de diario en facturas.
+    {
         trigger: "button[id='create_invoice']",
         content: _t("step 3"),
         position: "bottom",
@@ -152,6 +166,7 @@ odoo.define('demo_tour.multicompany', function(require) {
         edition: "enterprise",
         run: "click"
     },
+    // Paso 6: Ir y cambiar el diario y sleeccionar un diario de otra compania 
     {
         // trigger: 'button[data-menu-xmlid="account_multicompany_ux.action_account_change_company"]',
         trigger: "button[data-tooltip='Change Company']",
@@ -160,6 +175,8 @@ odoo.define('demo_tour.multicompany', function(require) {
         edition: "enterprise",
         run: "click"
     },
+    // Paso 7: Guardar la factura.
+
 
     // Aqui iria lo del nuevo desarrollo relacionado al nuevo wizard para cambiar de diario 
 
@@ -172,7 +189,7 @@ odoo.define('demo_tour.multicompany', function(require) {
     //     run: "click"
     // },
  ]
-     tour.register("adhoc_tour_multicompany", {
+     tour.register("ganancias.jsmulticompany", {
          url: "/web",
          sequence: 20,
      }, steps);
