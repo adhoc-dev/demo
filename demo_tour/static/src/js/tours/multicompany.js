@@ -8,24 +8,6 @@ odoo.define('demo_tour.multicompany', function(require) {
 
     const { markup } = owl;
 
-    // Paso 1: Seleccione la compania AR Inscripto y quedar ahi parado
-
-    // TODO Probar si funciona y descomentar
-    // {
-    //     trigger: "body > header > nav > div > div.o-dropdown.dropdown.o_switch_company_menu.d-none.d-md-block.o-dropdown--no-caret > button",
-    //     content: _t("Step 1: Open multicompany dropdown"),
-    //     position: "bottom",
-    //     edition: "enterprise"
-    // },
-    // {
-    //     trigger: ".log_into[aria-label='Switch to (AR) Responsable Inscripto']",
-    //     content: _t("Step 2: Select (AR) Responsable Inscripto company"),
-    //     position: "bottom",
-    //     edition: "enterprise"
-    // },
-
-    // Paso 2: Ver que esten seleccionados las otras companias en con la tilde
-
     const steps =  [tour.stepUtils.showAppsMenuItem(),
         // {
             // trigger: ".o_switch_company_menu > .dropdown-toggle",
@@ -61,7 +43,25 @@ odoo.define('demo_tour.multicompany', function(require) {
         //     edition: "enterprise",
         //     run: "click"
         // },
-        
+
+    // Paso 1: Seleccione la compania AR Inscripto y quedar ahi parado
+
+    // TODO Probar si funciona y descomentar
+    {
+        trigger: "body > header > nav > div > div.o-dropdown.dropdown.o_switch_company_menu.d-none.d-md-block.o-dropdown--no-caret > button",
+        content: _t("Step 1: Open multicompany dropdown"),
+        position: "bottom",
+        edition: "enterprise"
+   },
+   {
+       trigger: ".log_into[aria-label='Switch to (AR) Responsable Inscripto']",
+       content: _t("Step 2: Select (AR) Responsable Inscripto company"),
+       position: "bottom",
+       edition: "enterprise"
+   },
+
+   // Paso 2: Ver que esten seleccionados las otras companias en con la tilde
+
     // Paso 3: Crear una orden de venta a ADHOC
     {
         trigger: ".o_menuitem[data-menu-xmlid='sale.sale_menu_root']",
