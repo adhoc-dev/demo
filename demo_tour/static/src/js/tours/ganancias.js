@@ -120,7 +120,7 @@ odoo.define('demo_tour.sale_tour', function(require) {
 //         edition: "enterprise",
 //         run: "click"
 //     },
-// ]
+]
 
     tour.register("adhoc_tour_ganancias", {
         url: "/web",
