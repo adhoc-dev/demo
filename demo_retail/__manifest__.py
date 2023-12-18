@@ -56,6 +56,7 @@
         'demo/res_users_demo.xml',
         'demo/res_groups_demo.xml',
         'demo/stock_book_demo.xml',
+        'demo/sale_order_template_demo.xml'
     ],
     'test': [
     ],

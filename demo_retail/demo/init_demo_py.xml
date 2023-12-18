@@ -4,4 +4,6 @@
     <function model="res.users" name="_init_demo_retail"/>
     <function model="stock.warehouse" name="_init_demo_retail"/>
     <function model="website" name="_init_demo_retail"/>
+    <function model="res.company" name="_init_demo_retail"/>
+    <function model="stock.quant" name="_init_demo_retail"/>
 </odoo>
