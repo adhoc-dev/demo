@@ -29,6 +29,7 @@ class SaleOrder(models.Model):
                 if sale.website_id:
                     vals['website_id'] = new_sale_website_id
                 new_sale.write(vals)
+                new_sale._compute_pricelist_id()
                 if sale.state == 'sale':
                     new_sale.action_confirm()
                 elif sale.state == 'sent':
