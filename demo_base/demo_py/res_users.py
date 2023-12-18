@@ -77,9 +77,3 @@ class ResUsers(models.Model):
                 'company_id': self.env.ref('base.main_company').id
             })
             user.action_create_employee()
-
-        #A los demas usuarios le seteamos idioma español
-        users_ids = [6,7,2]
-        for user_id in users_ids:
-            user = self.env['res.users'].browse(user_id)
-            user.write({'lang': 'es_AR'})

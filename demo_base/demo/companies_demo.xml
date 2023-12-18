@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <record id="l10n_ar.partner_ri" model="res.partner">
-        <field name='name'>Muebleria SRL</field>
+        <field name='name'>Muebleria ARG</field>
         <field name="street">Ovidio Lagos 41 bis</field>
         <field name="phone">+54 9 3412080203</field>
         <field name="email">ventas@fabricademuebles.com</field>
@@ -9,7 +9,7 @@
     </record>
 
     <record id="l10n_ar.company_ri" model="res.company">
-        <field name='name'>Muebleria SRL</field>
+        <field name='name'>Muebleria ARG</field>
     </record>
 
     <function model="account.chart.template" name="generate_receiptbooks">

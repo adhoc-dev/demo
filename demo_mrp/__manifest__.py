@@ -42,6 +42,7 @@
     'data': [
     ],
     'demo': [
+        'demo/sale_order_template_demo.xml'
     ],
     'test': [
     ],

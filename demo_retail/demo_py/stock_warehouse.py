@@ -7,6 +7,11 @@ class Warehouse(models.Model):
 
     @api.model
     def _init_demo_retail(self):
-        warehouse = self.search([('name', '=', '(AR) Responsable Inscripto')])
-        if warehouse:
-            warehouse.write({'name': 'Muebleria SRL'})
+        warehouses = self.search([])
+        for warehouse in warehouses:
+            existing_warehouse = self.search([
+                ('name', '=', warehouse.company_id.name),
+                ('company_id', '=', warehouse.company_id.id)
+            ])
+            if not existing_warehouse:
+                warehouse.name = warehouse.company_id.name
