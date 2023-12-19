@@ -1,4 +1,4 @@
-odoo.define('demo_tour.sale_tour', function(require) {
+odoo.define('demo_tour.ganancias_tour', function(require) {
     "use strict";
 
     const {_t} = require('web.core');
@@ -7,30 +7,49 @@ odoo.define('demo_tour.sale_tour', function(require) {
 
     const { markup } = owl;
 
-    const steps =  [
-
-        tour.stepUtils.showAppsMenuItem(), {
-            trigger: ".o_menuitem[data-menu-xmlid='data-menu-xmlid='account_payment_group.menu_action_account_payments_group_payable']",
-            content: _t("Paso 1: Ir al menú 'Pagos de Proveedor'"),
+    const steps =  [tour.stepUtils.showAppsMenuItem(),
+        {
+            trigger: ".o_menuitem[data-menu-xmlid='account_accountant.menu_accounting']",
+            content: _t("Paso 1: Ir al menú 'Contabilidad'"),
             position: "bottom",
             edition: "enterprise"
         }, {
-            trigger: "button.btn-primary.o_list_button_add",
-            content: _t("Paso 2: Crear un nuevo pago de proveedor"),
+            trigger: ".dropdown-toggle[data-menu-xmlid='account.menu_finance_payables']",
+            content: _t("Paso 2: Ir al menú Proveedores"),
             position: "bottom",
             edition: "enterprise",
             run: "click"
         }, {
-            trigger: ".o_field_res_partner_many2one[name='partner_id']",
-            extra_trigger: ".o_sale_order",
-            content: _t("Paso 3: Seleccionar el proveedor 'ADHOC SA'"),
-            position: "right",
+            trigger: ".dropdown-item[data-menu-xmlid='account_payment_group.menu_action_account_payments_group_payable']",
+            content: _t("Paso 3: Ir al menú 'Pagos de Proveedor'"),
+            position: "bottom",
+            edition: "enterprise"
+        }, {
+            trigger: "button.btn-primary.o_list_button_add",
+            content: _t("Paso 4: Crear un nuevo pago de proveedor"),
+            position: "bottom",
+            edition: "enterprise",
+            run: "click"
+        }, {
+            trigger: ".o_field_many2one[name='partner_id']",
+            content: _t("Paso 5.1: Buscar el proveedor 'ADHOC SA'"),
+            position: "bottom",
             run: function (actions) {
                 actions.text("ADHOC SA", this.$anchor.find("input"));
             },
+        }, {
+            trigger: ".ui-menu-item > a:contains('ADHOC SA')",
+            content: _t("Paso 5.2: Seleccionar el proveedor 'ADHOC SA'"),
+            auto: true,
+            in_modal: false,
         },
+        /* {
+            trigger: "a:contains('21')",
+            content: _t("Paso 6: Verificar en el pago que se trae por defecto el número de régimen configurando en la data demo. Que seria el 21"),
+            auto: true,
+        },
+ */
 
-        // 4. Verificar en el pago que se trae por defecto el número de régimen configurando en la data demo. Que seria el 21
         // 5. Congigurar store “Shared Store (No company)” (no es realmente necesario para el test, pero si nom nos deja continuar para guardar el pago)
         // 6. Ir a la pestana deudas, y limpiar el campo to_pay_move_line_ids
         // 7. Modificar capo auste avances y colocar monto 100.000
