@@ -49,13 +49,13 @@ odoo.define('demo_tour.multicompany', function(require) {
     // TODO Probar si funciona y descomentar
     {
         trigger: "body > header > nav > div > div.o-dropdown.dropdown.o_switch_company_menu.d-none.d-md-block.o-dropdown--no-caret > button",
-        content: _t("Step 1: Open multicompany dropdown"),
+        content: _t("Paso 1: Open multicompany dropdown"),
         position: "bottom",
         edition: "enterprise"
    },
    {
        trigger: ".log_into[aria-label='Switch to (AR) Responsable Inscripto']",
-       content: _t("Step 2: Select (AR) Responsable Inscripto company"),
+       content: _t("Paso 2: Select (AR) Responsable Inscripto company"),
        position: "bottom",
        edition: "enterprise"
    },

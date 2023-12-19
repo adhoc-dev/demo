@@ -11,19 +11,19 @@ odoo.define('demo_tour.sale_tour', function(require) {
 
         tour.stepUtils.showAppsMenuItem(), {
             trigger: ".o_menuitem[data-menu-xmlid='data-menu-xmlid='account_payment_group.menu_action_account_payments_group_payable']",
-            content: _t("Paso 1 - Ir al menú 'Pagos de Proveedor'"),
+            content: _t("Paso 1: Ir al menú 'Pagos de Proveedor'"),
             position: "bottom",
             edition: "enterprise"
         }, {
             trigger: "button.btn-primary.o_list_button_add",
-            content: _t("Paso 2 - Crear un nuevo pago de proveedor"),
+            content: _t("Paso 2: Crear un nuevo pago de proveedor"),
             position: "bottom",
             edition: "enterprise",
             run: "click"
         }, {
             trigger: ".o_field_res_partner_many2one[name='partner_id']",
             extra_trigger: ".o_sale_order",
-            content: _t("Paso 3 - Seleccionar el proveedor 'ADHOC SA'"),
+            content: _t("Paso 3: Seleccionar el proveedor 'ADHOC SA'"),
             position: "right",
             run: function (actions) {
                 actions.text("ADHOC SA", this.$anchor.find("input"));

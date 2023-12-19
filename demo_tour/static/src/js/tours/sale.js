@@ -9,35 +9,36 @@ odoo.define('demo_tour.sale_tour', function(require) {
 
     const steps =  [tour.stepUtils.showAppsMenuItem(), {
         trigger: ".o_menuitem[data-menu-xmlid='sale.sale_menu_root']",
-        content: _t("Open Sales app to send your first quotation in a few clicks."),
+        content: _t("Paso 1: Open Sales app to send your first quotation in a few clicks."),
         position: "bottom",
         edition: "enterprise"
     }, {
         trigger: "button.btn-primary.o_list_button_add",
-        content: _t("step 2"),
+        content: _t("Paso 2: "),
         position: "bottom",
         edition: "enterprise",
         run: "click"
     }, {
         trigger: ".o_field_res_partner_many2one[name='partner_id']",
         extra_trigger: ".o_sale_order",
-        content: _t("Write a company name to create one, or see suggestions."),
+        content: _t("Paso 3: Write a company name to create one, or see suggestions."),
         position: "right",
         run: function (actions) {
             actions.text("Deco Addict", this.$anchor.find("input"));
         },
     }, {
         trigger: ".ui-menu-item > a:contains('Deco Addict')",
+        content: _t("Paso 4:"),
         auto: true,
         in_modal: false,
     }, {
         trigger: ".o_field_x2many_list_row_add > a",
-        content: _t("Click here to add some products or services to your quotation."),
+        content: _t("Paso 5: Click here to add some products or services to your quotation."),
         position: "bottom",
     }, {
         trigger: ".o_field_widget[name='product_id'], .o_field_widget[name='product_template_id']",
         extra_trigger: ".o_sale_order",
-        content: _t("Select a product, or create a new one on the fly."),
+        content: _t("Paso 6: Select a product, or create a new one on the fly."),
         position: "right",
         run: function (actions) {
             var $input = this.$anchor.find("input");
@@ -55,16 +56,17 @@ odoo.define('demo_tour.sale_tour', function(require) {
         id: "product_selection_step"
     }, {
         trigger: "a:contains('[E-COM11] Cabinet with Doors')",
+        content: _t("Paso 7"),
         auto: true,
     }, {
         trigger: ".o_field_widget[name='price_unit'] ",
         extra_trigger: ".fa-arrow-right",  // Wait for product creation
-        content: Markup(_t("<b>Set a price</b>.")),
+        content: Markup(_t("Paso 8: <b>Set a price</b>.")),
         position: "right",
         run: "text 10.0"
     }, {
         trigger: "button[name='action_confirm']",
-        content: _t("step 3"),
+        content: _t("Paso 9"),
         position: "bottom",
         edition: "enterprise",
         run: "click"
