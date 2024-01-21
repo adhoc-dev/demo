@@ -1,4 +1,4 @@
-from odoo import api, models
+from odoo import api, models, fields
 
 
 class ResConfigSettings(models.TransientModel):
@@ -9,6 +9,9 @@ class ResConfigSettings(models.TransientModel):
     def _init_demo_base(self):
         set_param = self.env['ir.config_parameter'].sudo().set_param
         set_param('sale_ux.update_prices_automatically', 'True')
+        set_param('analytic.group_analytic_accounting', 'True')
+        set_param('product.product_pricelist_setting', 'advanced')
+        set_param('stock.group_stock_adv_location', 'True')
 
     def _inverse_sale_tax_ids(self):
         super()._inverse_sale_tax_ids()
