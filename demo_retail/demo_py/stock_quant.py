@@ -28,7 +28,7 @@ class StockQuant(models.Model):
             if not new_warehouse_stock_location:
                 continue
             for quant in self.env['stock.quant'].search([('location_id', '=', main_warehouse_stock_location)]):
-                new_defaults = {}
+                new_defaults = {'inventory_quantity': quant.quantity}
                 if quant.lot_id:
                     new_defaults['lot_id'] = quant.lot_id.copy({'company_id':company.id, 'name': quant.lot_id.name+'1'}).id
                 new = quant.with_company(company).copy(new_defaults)
