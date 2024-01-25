@@ -44,11 +44,16 @@ odoo.define('demo_tour.ganancias_tour', function(require) {
             in_modal: false,
         },
         /* {
-            trigger: "a:contains('21')",
+            // trigger: "input[name='regimen_ganancias_id']:contains('21')",
+            // trigger: "a:contains('21')",
+            // trigger: ".o_field_bank_rec_widget_form_lines_widget tr.o_data_row:contains('Suspense') td[field='debit']:contains('$ 1,000.00')",
+            // <input type="text" class="o-autocomplete--input o_input" autocomplete="off" id="regimen_ganancias_id" placeholder="">
             content: _t("Paso 6: Verificar en el pago que se trae por defecto el número de régimen configurando en la data demo. Que seria el 21"),
-            auto: true,
+            // run: () => {},
+            // run() {},
+            run: function() {},
         },
- */
+        */
 
         // 5. Congigurar store “Shared Store (No company)” (no es realmente necesario para el test, pero si nom nos deja continuar para guardar el pago)
         // 6. Ir a la pestana deudas, y limpiar el campo to_pay_move_line_ids
