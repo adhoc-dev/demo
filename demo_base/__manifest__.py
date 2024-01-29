@@ -39,6 +39,7 @@
         # Finanzas / Contabilidad avanzada:
         'account_accountant',
         'saas_client_account',
+        # 'account_reports_multicurrency', solicitado por comercial
         # Finanzas / Facturacion y Pagos:
         'account',
         'account_invoice_tax',
@@ -59,6 +60,10 @@
         'l10n_us',
         # Localizaciones / Loc Urugaya:
         'l10n_uy_edi',
+        # Localizaciones / Loc España:
+        'l10n_es',
+        # Localizaciones / Loc Perú:
+        'l10n_pe',
         # RRHH / Asistencias:
         'hr_attendance',
         # RRHH / Ausencias:
@@ -110,7 +115,7 @@
         'partner_contact_access_link',
         'sale_ux',
         'payment_multic_ux',
-        'account_balance_import',
+        # 'account_balance_import', lo comento porque me da error al instalr
         'product_price_taxes_included',
         'sale_quotation_products',
         'l10n_ar_sale',

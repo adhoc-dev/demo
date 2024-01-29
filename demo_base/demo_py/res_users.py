@@ -77,3 +77,6 @@ class ResUsers(models.Model):
                 'company_id': self.env.ref('base.main_company').id
             })
             user.action_create_employee()
+
+        # Le agregamos a Marc Demo la compania de Uruguay
+        self.env.ref('base.user_demo').write({'company_ids': [(4, self.env.ref('l10n_uy_account.company_uy').id)]})
