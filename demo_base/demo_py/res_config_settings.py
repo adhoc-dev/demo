@@ -12,27 +12,16 @@ class ResConfigSettings(models.TransientModel):
         set_param('analytic.group_analytic_accounting', 'True')
         set_param('product.product_pricelist_setting', 'advanced')
         set_param('stock.group_stock_adv_location', 'True')
+        # cl
+        cl_c = self.env.ref('l10n_cl.demo_company_cl')
+        # uy
+        uy_c = self.env.ref('l10n_uy_account.company_uy')
+        # ar (ri, muebleria)
+        ar_c = self.env.ref('l10n_ar.company_ri')
+        # us (main_company)
+        us_c = self.env.ref('base.main_company')
 
-    def _inverse_sale_tax_ids(self):
-        super()._inverse_sale_tax_ids()
-        # TODO ver con team localizaciones si sumamos esto en saas_client_account para que quede para todo el mundo
-        # buscamos productos de esta compañia o sin compañía que no tengan ningun impuesto de esta compañía y
-        # le configuramos este impuesto por defecto
-        for rec in self:
-            taxes = rec.sale_tax_ids.filtered(lambda tax: tax.company_id == rec.company_id)
-            if taxes:
-                self.env['product.template'].search([
-                    ('company_id', 'in', [False, rec.company_id.id]),
-                    ('taxes_id.company_id', '=', rec.company_id.id)]).write({'taxes_id': [(4, taxes[0].id)]})
-
-    def _inverse_purchase_tax_ids(self):
-        super()._inverse_purchase_tax_ids()
-        # TODO ver con team localizaciones si sumamos esto en saas_client_account para que quede para todo el mundo
-        # buscamos productos de esta compañia o sin compañía que no tengan ningun impuesto de esta compañía y
-        # le configuramos este impuesto por defecto
-        for rec in self:
-            taxes = rec.purchase_tax_ids.filtered(lambda tax: tax.company_id == rec.company_id)
-            if taxes:
-                self.env['product.template'].search([
-                    ('company_id', 'in', [False, rec.company_id.id]),
-                    ('supplier_taxes_id.company_id', '=', rec.company_id.id)]).write({'supplier_taxes_id': [(4, taxes[0].id)]})
+        for company in ar_c + uy_c + cl_c + us_c:
+            wizard = self.with_company(company).create({})
+            wizard._inverse_sale_tax_ids()
+            wizard._inverse_purchase_tax_ids()
