@@ -20,8 +20,12 @@ class ResConfigSettings(models.TransientModel):
         ar_c = self.env.ref('l10n_ar.company_ri')
         # us (main_company)
         us_c = self.env.ref('base.main_company')
+        # pe 
+        pe_c = self.env.ref('l10n_pe.demo_company_pe')
+        # es (main_company)
+        es_c = self.env.ref('l10n_es.demo_company_es')
 
-        for company in ar_c + uy_c + cl_c + us_c:
+        for company in ar_c + uy_c + cl_c + us_c + pe_c + es_c:
             wizard = self.with_company(company).create({})
             wizard._inverse_sale_tax_ids()
             wizard._inverse_purchase_tax_ids()
