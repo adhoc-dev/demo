@@ -46,7 +46,7 @@ class ResPartner(models.Model):
                 'base.partner_demo_portal': 'l10n_uy_account.partner_cfu',
             },
             'CL': {
-                # Ready Mat a ready Mat (seria el foreign de chile que no esta creado)
+                # Ready Mat a ready Mat (seria el foreign de chile que no esta creado, por ahora lo mapeamos a si mismo)
                 'base.res_partner_4': 'base.res_partner_4',
                 # Deco Addict mappeamos a Blanco Martin
                 'base.res_partner_2': 'l10n_cl.res_partner_bmya',
@@ -61,6 +61,40 @@ class ResPartner(models.Model):
                 # Joel Willis mappeamos a Consumidor final uruguayo
                 'base.partner_demo_portal': 'l10n_cl.res_partner_bmya',
             },
+            'ES': {
+                #Por ahora mapeamos todos asi mismos para que no de los Warning
+                # Ready Mat a ready Mat
+                'base.res_partner_4': 'base.res_partner_4',
+                # Deco Addict mappeamos a Deco Addict
+                'base.res_partner_2': 'base.res_partner_2',
+                # Gemmini Furniture mappeamos a Gemmini Furniture
+                'base.res_partner_3': 'base.res_partner_3',
+                # Lumber Inc mappeamos a Lumber
+                'base.res_partner_18': 'base.res_partner_18',
+                # Azure mappeamos a Azure
+                'base.res_partner_12': 'base.res_partner_12',
+                # Ready Mat a ready Mat 
+                'base.res_partner_1': 'base.res_partner_1',
+                # Joel Willis mappeamos a Joel Willis
+                'base.partner_demo_portal': 'base.partner_demo_portal',
+            },
+            'PE': {
+                #Por ahora mapeamos todos asi mismos para que no de los Warning
+                # Ready Mat a ready Mat
+                'base.res_partner_4': 'base.res_partner_4',
+                # Deco Addict mappeamos a Deco Addict
+                'base.res_partner_2': 'base.res_partner_2',
+                # Gemmini Furniture mappeamos a Gemmini Furniture
+                'base.res_partner_3': 'base.res_partner_3',
+                # Lumber Inc mappeamos a Lumber
+                'base.res_partner_18': 'base.res_partner_18',
+                # Azure mappeamos a Azure
+                'base.res_partner_12': 'base.res_partner_12',
+                # Ready Mat a ready Mat 
+                'base.res_partner_1': 'base.res_partner_1',
+                # Joel Willis mappeamos a Joel Willis
+                'base.partner_demo_portal': 'base.partner_demo_portal',
+            },
         }
         return self._get_partner(mapping.get(company.country_id.code, {}))
 
@@ -72,7 +106,7 @@ class ResPartner(models.Model):
             return self
         xmlid = mapping.get(list(external_id.values())[0])
         if not xmlid:
-            _logger.warning('No se encontró external id en mapping para partner %s', self.name)
+            _logger.info('No se encontró external id en mapping para partner %s', self.name)
             return self
         new_partner = self.env.ref(xmlid)
         if not new_partner:

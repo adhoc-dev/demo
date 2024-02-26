@@ -22,7 +22,9 @@ class ResUsers(models.Model):
                     (3, self.env.ref('l10n_ar.company_mono').id, 0),
                     (3, self.env.ref('l10n_ar.company_exento').id, 0),
                     (3, self.env.ref('l10n_uy_account.company_uy').id, 0),
-                    (3, self.env.ref('l10n_cl.demo_company_cl').id, 0)],
+                    (3, self.env.ref('l10n_cl.demo_company_cl').id, 0),
+                    (3, self.env.ref('l10n_es.demo_company_es').id, 0),
+                    (3, self.env.ref('l10n_pe.demo_company_pe').id, 0)],
                 'company_id': self.env.ref('l10n_ar.company_ri').id
             })
             user.action_create_employee()
@@ -39,7 +41,9 @@ class ResUsers(models.Model):
                     (3, self.env.ref('l10n_ar.company_mono').id, 0),
                     (3, self.env.ref('l10n_ar.company_exento').id, 0),
                     (3, self.env.ref('l10n_ar.company_ri').id, 0),
-                    (3, self.env.ref('l10n_cl.demo_company_cl').id, 0)],
+                    (3, self.env.ref('l10n_cl.demo_company_cl').id, 0),
+                    (3, self.env.ref('l10n_es.demo_company_es').id, 0),
+                    (3, self.env.ref('l10n_pe.demo_company_pe').id, 0)],
                 'company_id': self.env.ref('l10n_uy_account.company_uy').id
             })
             user.action_create_employee()
@@ -56,7 +60,9 @@ class ResUsers(models.Model):
                     (3, self.env.ref('l10n_ar.company_mono').id, 0),
                     (3, self.env.ref('l10n_ar.company_exento').id, 0),
                     (3, self.env.ref('l10n_ar.company_ri').id, 0),
-                    (3, self.env.ref('l10n_uy_account.company_uy').id, 0)],
+                    (3, self.env.ref('l10n_uy_account.company_uy').id, 0),
+                    (3, self.env.ref('l10n_es.demo_company_es').id, 0),
+                    (3, self.env.ref('l10n_pe.demo_company_pe').id, 0)],
                 'company_id': self.env.ref('l10n_cl.demo_company_cl').id
             })
             user.action_create_employee()
@@ -73,10 +79,51 @@ class ResUsers(models.Model):
                     (3, self.env.ref('l10n_ar.company_exento').id, 0),
                     (3, self.env.ref('l10n_ar.company_ri').id, 0),
                     (3, self.env.ref('l10n_uy_account.company_uy').id, 0),
-                    (3, self.env.ref('l10n_cl.demo_company_cl').id, 0)],
+                    (3, self.env.ref('l10n_cl.demo_company_cl').id, 0),
+                    (3, self.env.ref('l10n_es.demo_company_es').id, 0),
+                    (3, self.env.ref('l10n_pe.demo_company_pe').id, 0)],
                 'company_id': self.env.ref('base.main_company').id
             })
             user.action_create_employee()
+        if not self.search([('login', '=', 'admin_pe')]):
+            user = self.env.ref('base.user_admin').copy({
+                'name': 'Valentino',
+                'email': 'valentino@fabricademuebles.com',
+                'login': 'admin_pe',
+                'password': 'admin_pe',
+                'active': True,
+                'lang': 'es_AR',
+            })
+            user.write({
+                'company_ids': [
+                    (3, self.env.ref('l10n_ar.company_mono').id, 0),
+                    (3, self.env.ref('l10n_ar.company_exento').id, 0),
+                    (3, self.env.ref('l10n_uy_account.company_uy').id, 0),
+                    (3, self.env.ref('l10n_cl.demo_company_cl').id, 0),
+                    (3, self.env.ref('l10n_ar.company_ri').id, 0),
+                    (3, self.env.ref('l10n_es.demo_company_es').id, 0)],
+                'company_id': self.env.ref('l10n_pe.demo_company_pe').id
+            })
+            user.action_create_employee()
+        if not self.search([('login', '=', 'admin_es')]):
+            user = self.env.ref('base.user_admin').copy({
+                'name': 'Valentino',
+                'email': 'valentino@fabricademuebles.com',
+                'login': 'admin_es',
+                'password': 'admin_es',
+                'active': True,
+                'lang': 'es_AR',
+            })
+            user.write({
+                'company_ids': [
+                    (3, self.env.ref('l10n_ar.company_mono').id, 0),
+                    (3, self.env.ref('l10n_ar.company_exento').id, 0),
+                    (3, self.env.ref('l10n_uy_account.company_uy').id, 0),
+                    (3, self.env.ref('l10n_cl.demo_company_cl').id, 0),
+                    (3, self.env.ref('l10n_pe.demo_company_pe').id, 0),
+                    (3, self.env.ref('l10n_ar.company_ri').id, 0),],
+                'company_id': self.env.ref('l10n_es.demo_company_es').id
+            })
+            user.action_create_employee()
 
-        # Le agregamos a Marc Demo la compania de Uruguay
-        self.env.ref('base.user_demo').write({'company_ids': [(4, self.env.ref('l10n_uy_account.company_uy').id)]})
+

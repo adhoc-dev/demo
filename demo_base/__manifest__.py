@@ -59,6 +59,8 @@
         # Localizaciones / Loc USA:
         'l10n_us',
         # Localizaciones / Loc Urugaya:
+        # lo comentamos por error en runbot 
+        'l10n_uy',
         'l10n_uy_edi',
         # Localizaciones / Loc España:
         'l10n_es',
@@ -115,7 +117,7 @@
         'partner_contact_access_link',
         'sale_ux',
         'payment_multic_ux',
-        # 'account_balance_import', lo comento porque me da error al instalr
+        'account_balance_import',
         'product_price_taxes_included',
         'sale_quotation_products',
         'l10n_ar_sale',

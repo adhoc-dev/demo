@@ -15,7 +15,11 @@ class PurchaseOrder(models.Model):
         ar_c = self.env.ref('l10n_ar.company_ri')
         # us (main_company)
         us_c = self.env.ref('base.main_company')
-        for company in ar_c + uy_c + cl_c:
+        # pe 
+        pe_c = self.env.ref('l10n_pe.demo_company_pe')
+        # es (main_company)
+        es_c = self.env.ref('l10n_es.demo_company_es')
+        for company in ar_c + uy_c + cl_c + pe_c + es_c:
             for purchase in self.env['purchase.order'].search([('company_id', '=', us_c.id)]):
                 new_purchase = purchase.copy()
                 new_purchase.write({'company_id': company.id, 'partner_id': purchase.partner_id._get_company_partner(company).id} )
