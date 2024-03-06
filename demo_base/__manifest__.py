@@ -60,7 +60,6 @@
         'l10n_us',
         # Localizaciones / Loc Urugaya:
         # lo comentamos por error en runbot 
-        'l10n_uy',
         'l10n_uy_edi',
         # Localizaciones / Loc España:
         'l10n_es',
