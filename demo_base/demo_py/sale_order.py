@@ -61,6 +61,10 @@ class SaleOrder(models.Model):
                 _logger.warning('No encontramos ordenas de venta a facturar en compañía %s', company.name)
                 continue
 
+            # en chile tenemos un tema con la fecha del timbrado o algo asi
+            # en peru todavia no mapeamos a partners y nos da error por falta de vat
+            if company in (cl_c, pe_c):
+                continue
             # caso a
             sale_a = sale.copy()
             sale_a.write({'date_order': yesterday})
