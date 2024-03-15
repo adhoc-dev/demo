@@ -166,8 +166,6 @@
         'demo/website_demo.xml',
         'demo/init_demo_py.xml',
     ],
-    'test': [
-    ],
     'installable': True,
     'auto_install': False,
     'application': False,
